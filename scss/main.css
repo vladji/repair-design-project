@@ -32,6 +32,12 @@ ol, ul {
   list-style: none;
 }
 
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -47,12 +53,362 @@ table {
   border-spacing: 0;
 }
 
-.body-wrapper {
-  width: 1440px;
+@font-face {
+  font-family: "Futura";
+  src: url("../../assets/fonts/futura.otf") format("opentype");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #252525;
+}
+
+.body-inner {
+  max-width: 1440px;
+  margin: auto;
   background-color: #fff;
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-wrap {
+  width: 40%;
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-item a {
+  font-family: "Futura", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-phone {
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 14px;
+  color: #e3b873;
+}
+
+.aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5.7%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aside p {
+  font-family: "Futura", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #e3b873;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.aside p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 115%;
+  width: 50px;
+  height: 2px;
+  background-color: #e3b873;
+}
+
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  background-color: #131313;
+}
+
+.logo-txt {
+  font-family: "Futura", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #e3b873;
+}
+
+.header__wrap {
+  display: block;
+  width: 94.3%;
+}
+
+.header__wrap .header__menu-wrap {
+  padding: 2% 7% 2% 0;
+}
+
+.header__wrap .header__menu-wrap .menu-btn {
+  width: 161px;
+  height: 37px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: "Futura", sans-serif;
+  font-size: 13px;
+  background-color: #e3b873;
+}
+
+.header__wrap .header__menu-wrap .menu-btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__wrap .header__content {
+  padding: 14% 0 15% 5%;
+  background-image: url("../assets/img/header-layer.png");
+}
+
+.header__wrap .header__text-wrap h1 {
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 3.2rem;
+}
+
+.header__wrap .header__text-wrap h1 span {
+  color: #e3b873;
+}
+
+.header__wrap .header__text-wrap p {
+  margin: 20px 0 40px;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 1.37rem;
+  color: #fff;
+  line-height: 1.9rem;
+}
+
+.header__wrap .header__btns-wrap .header__btn-left {
+  width: 207px;
+  height: 51px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: "Futura", sans-serif;
+  font-size: 0.8rem;
+  background-color: #e3b873;
+  margin-right: 20px;
+}
+
+.header__wrap .header__btns-wrap .header__btn-left a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__wrap .header__btns-wrap .header__btn-right {
+  width: 207px;
+  height: 51px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: "Futura", sans-serif;
+  font-size: 0.8rem;
+  background-color: #e3b873;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.header__wrap .header__btns-wrap .header__btn-right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  width: 100%;
+}
+
+.projects {
+  padding: 8% 0 20% 6%;
+  color: #fff;
+  background-color: #131313;
+}
+
+.projects-wrapper {
+  position: relative;
+}
+
+.projects__main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects__main-block .projects__txt {
+  display: block;
+  width: 37%;
+  padding-top: 5%;
+}
+
+.projects__main-block .projects__txt h2 {
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: #e3b873;
+  line-height: 2.3rem;
+}
+
+.projects__main-block .projects__txt h2 span {
+  position: relative;
+}
+
+.projects__main-block .projects__txt h2 span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 115%;
+  width: 50%;
+  height: 1px;
+  background-color: #e3b873;
+}
+
+.projects__main-block .projects__txt p {
+  padding: 8% 22% 0 0;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.8rem;
+}
+
+.projects__main-block .projects__slider {
+  width: 63%;
+  padding-top: 5%;
+  overflow: hidden;
+}
+
+.projects__main-block .projects__slider .projects__units {
+  position: absolute;
+  top: -2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.projects__main-block .projects__slider .projects__units li {
+  cursor: pointer;
+}
+
+.projects__main-block .projects__slider .projects__units li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.projects__main-block .projects__slider .projects__units-1_active {
+  position: relative;
+  color: #e3b873;
+}
+
+.projects__main-block .projects__slider .projects__units-1_active::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e3b873;
+}
+
+.projects__main-block .projects__slider .projects__slider-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects__main-block .projects__slider .projects__slider-img li {
+  margin-right: 25px;
+}
+
+.projects__main-block .projects__slider .projects__slider-img li img {
+  display: block;
+  width: 38vw;
+}
+
+.projects__addition-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 37%;
+}
+
+.projects__addition-info .projects__points-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.projects__addition-info .projects__point {
+  width: 40%;
+}
+
+.projects__addition-info .projects__point p:first-child {
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #e3b873;
+}
+
+.projects__addition-info .projects__point p:last-child {
+  padding: 8% 0 25% 0;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 0.93rem;
+  color: #fff;
+  line-height: 1.25rem;
 }
 /*# sourceMappingURL=main.css.map */

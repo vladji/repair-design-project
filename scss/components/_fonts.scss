@@ -1,0 +1,13 @@
+@mixin futura-font($size, $color, $trans) {
+  font-family: "Futura", sans-serif;
+  text-transform: $trans;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin yeseva-font($size, $color, $trans) {
+  font-family: 'Yeseva One', cursive;
+  text-transform: $trans;
+  font-size: $size;
+  color: $color;
+}

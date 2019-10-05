@@ -1,0 +1,17 @@
+@mixin main-btn($width, $height, $font, $size) {
+  width: $width;
+  height: $height;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: $font;
+  font-size: $size;
+  background-color: $bckg-btn;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $txt-color-btn;
+  }
+}

@@ -1,3 +1,79 @@
-.header {
-  width: 100%;
+.aside {
+  display: flex;
+  width: 5.7%;
+  align-items: center;
+
+  p {
+    @include futura-font(14px, $gold_color, uppercase);
+    transform: rotate(90deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 115%;
+      width: 50px;
+      height: 2px;
+      background-color: $gold_color;
+    }
+  }
 }
+
+.header {
+  display: flex;
+  width: 100%;
+  background-color: #131313;
+}
+
+.logo-txt {
+  @include futura-font(14px, $gold_color, uppercase);
+}
+
+.header__wrap {
+  display: block;
+  width: 94.3%;
+
+  .header__menu-wrap {
+    padding: 2% 7% 2% 0;
+
+    .menu-btn {
+      @include main-btn(161px, 37px, $font-futura, 13px);
+    }
+  }
+
+  .header__content {
+    padding: 14% 0 15% 5%;
+    background-image: url("../assets/img/header-layer.png");
+  }
+
+  .header__text-wrap {
+    h1 {
+      @include yeseva-font(2.5rem, $white_color, uppercase);
+      line-height: 3.2rem;
+      span {
+        color: $gold_color;
+      }
+    }
+
+    p {
+      margin: 20px 0 40px;
+      @include futura-font(1.37rem, $white_color, none);
+      line-height: 1.9rem;
+    }
+  }
+
+  .header__btns-wrap {
+    .header__btn-left {
+      @include main-btn(207px, 51px, $font-futura, 0.8rem);
+      margin-right: 20px;
+    }
+
+    .header__btn-right {
+      @include main-btn(207px, 51px, $font-futura, 0.8rem);
+      border: 1px solid #fff;
+      background-color: transparent;
+    }
+  }
+}
+
+

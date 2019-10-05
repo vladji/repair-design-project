@@ -29,6 +29,11 @@ body {
 ol, ul {
 	list-style: none;
 }
+button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
 blockquote, q {
 	quotes: none;
 }

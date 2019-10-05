@@ -1,4 +1,16 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../../assets/fonts/futura.otf") format("opentype");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #252525;
+}
+
 .body-inner {
-  width: 1440px;
+  max-width: 1440px;
+  margin: auto;
   background-color: #fff;
 }

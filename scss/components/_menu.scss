@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-wrap {
+  width: 40%;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  a {
+    @include futura-font(14px, $white_color, uppercase);
+    text-decoration: none;
+  }
+}
+
+.contact-phone {
+  @include futura-font(14px, $gold_color, none);
+}
