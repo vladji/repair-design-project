@@ -1,0 +1,27 @@
+@mixin form($label_color, $input_color) {
+  .form__flex-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    @include futura-font(.9rem, $label_color, none);
+  }
+
+  input[type="text"] {
+    @include futura-font(1.1rem, $input_color, none);
+  }
+
+  .form__checkbox {
+
+    label {
+      display: inline;
+    }
+
+    input {
+      // background-color: $gold_color;
+    }
+  }
+}

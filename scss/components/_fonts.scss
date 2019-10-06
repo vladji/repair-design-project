@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../assets/fonts/futurabookc.otf") format("opentype");
+}
+
 @mixin futura-font($size, $color, $trans) {
   font-family: "Futura", sans-serif;
   text-transform: $trans;

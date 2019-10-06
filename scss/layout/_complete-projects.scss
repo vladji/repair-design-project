@@ -1,0 +1,220 @@
+main {
+  width: 100%;
+}
+
+.projects {
+  padding: 8% 0 30% 6%;
+  color: $white_color;
+  background-color: #131313;
+  background-image: url('../assets/img/city-Group.png');
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-blend-mode: overlay;
+
+  @media screen and (max-width: 1170px) {
+    padding: 8% 6% 20%;
+  }
+}
+
+.projects-wrapper {
+  position: relative;
+}
+
+.projects__main-block {
+  display: flex;
+
+  @media screen and (max-width: 1170px) {
+    display: block;
+  }
+
+  .projects__txt {
+    display: block;
+    width: 37%;
+    padding-top: 5%;
+
+    @media screen and (max-width: 1170px) {
+      width: 100%;
+    }
+
+    h2 {
+      @include yeseva-font(1.7rem, $gold_color, uppercase);
+      line-height: 2.3rem;
+
+      span {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 115%;
+          width: 50%;
+          height: 1px;
+          background-color: $gold_color;
+        }
+      }
+    }
+
+    p {
+      padding: 8% 15% 0 0;
+      @include futura-font(1.1rem, $white_color, none);
+      line-height: 1.8rem;
+
+      @media screen and (max-width: 1170px) {
+        padding: 4% 0 0;
+      }
+    }
+  }
+
+  .projects__slider {
+    position: relative;
+    width: 63%;
+    padding-top: 5%;
+    overflow: hidden;
+
+    @media screen and (max-width: 1170px) {
+      width: 100%;
+    }
+
+    .projects__units {
+      position: absolute;
+      top: 0;
+      display: flex;
+      @include yeseva-font(0.9rem, rgba(255, 255, 255, 0.3), uppercase);
+
+      @media screen and (max-width: 1170px) {
+        position: static;
+        margin-bottom: 5%;
+      }
+
+      li {
+        cursor: pointer;
+      }
+
+      li:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    .projects__units-1_active {
+      position: relative;
+      color: $gold_color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 150%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $gold_color;
+      }
+    }
+
+    .projects__slider-img {
+      display: flex;
+
+      li {
+        margin-right: 25px;
+
+        img {
+          display: block;
+
+          @media screen and (max-width: 1170px) {
+            width: 88vw;
+          }
+        }
+      }
+    }
+
+    .projects__slider-btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 4%;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: $gold_color;
+      background-image: url("../assets/img/arrow-next_white.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.projects__addition-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 37%;
+
+  @media screen and (max-width: 1170px) {
+    position: static;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .projects__points-wrap {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .projects__point {
+    width: 40%;
+
+    @media screen and (max-width: 1170px) {
+      width: 50%;
+    }
+
+    p:first-child {
+      @include yeseva-font(1.1rem, $gold_color, uppercase);
+    }
+
+    p:last-child {
+      padding: 8% 0 25% 0;
+      @include futura-font(0.93rem, $white_color, none);
+      line-height: 1.25rem;
+
+      @media screen and (max-width: 1170px) {
+        padding: 5% 0 9% 0;
+      }
+    }
+  }
+
+  .projects__control-wrap {
+    display: flex;
+    width: 44%;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1170px) {
+      display: none;
+    }
+  }
+
+  .projects__control-left-arrow {
+    width: 42px;
+    height: 14px;
+    transform: rotate(180deg);
+    background-image: url("../assets/img/arrow-raw.png");
+  }
+
+  .projects__control-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &_active {
+      width: 13px;
+      height: 13px;
+      background-color: $white_color;
+    }
+  }
+
+  .projects__control-right-arrow {
+    width: 42px;
+    height: 14px;
+    background-image: url("../assets/img/arrow-raw.png");
+  }
+}
