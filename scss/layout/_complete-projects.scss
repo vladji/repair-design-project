@@ -197,6 +197,7 @@ main {
     height: 14px;
     transform: rotate(180deg);
     background-image: url("../assets/img/arrow-raw.png");
+    cursor: pointer;
   }
 
   .projects__control-dot {
@@ -204,11 +205,13 @@ main {
     height: 10px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 
     &_active {
       width: 13px;
       height: 13px;
       background-color: $white_color;
+      cursor: pointer;
     }
   }
 
@@ -216,5 +219,6 @@ main {
     width: 42px;
     height: 14px;
     background-image: url("../assets/img/arrow-raw.png");
+    cursor: pointer;
   }
 }

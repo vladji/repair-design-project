@@ -22,21 +22,44 @@
 }
 
 .btn-play {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
   width: 85px;
   height: 85px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   background-color: $gold_color;
+  z-index: 1;
+  transition: background-color 1s ease-out 0.1s, z-index 1s ease-out 0.1s;
 
   div {
     transform: translate(33%);
     border: 20px solid transparent;
     border-left: 25px solid $white_color;
+  }
+}
+
+.scroll-btn {
+  display: flex;
+  position: absolute;
+  bottom: -48px;
+  left: -82px;
+  padding: 3% 4%;
+  justify-content: center;
+  align-items: center;
+  @include yeseva-font(.9rem, $white_color, uppercase);
+  background-color: $back-dark;
+  cursor: default;
+
+  .scroll-btn__inner-icon {
+    width: 29px;
+    height: 29px;
+    margin-left: 15px;
+    background: url('../assets/img/scroll-btn-inner-icon.svg') no-repeat;
+    cursor: pointer;
   }
 }

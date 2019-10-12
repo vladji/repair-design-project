@@ -1,27 +1,83 @@
 @mixin form($label_color, $input_color) {
   .form__flex-box {
     display: flex;
-    justify-content: center;
+    width: 53%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .form__main-group {
+    // border-top: 0;
+    // border-left: 0;
+    // border-right: 0;
+    // border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   }
 
   label {
     display: block;
     text-align: left;
-    @include futura-font(.9rem, $label_color, none);
+    @include futura-font(0.9rem, $label_color, none);
   }
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="number"] {
+    padding-bottom: 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     @include futura-font(1.1rem, $input_color, none);
   }
 
   .form__checkbox {
+    margin-top: 2%;
 
-    label {
-      display: inline;
+    .form__checkbox-label {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      color: #181818;
     }
 
     input {
-      // background-color: $gold_color;
+      position: absolute;
+      width: 0;
+      height: 0;
+
+      &:checked {
+        .form__checkmark {
+          position: absolute;
+          top: -3px;
+          left: 40%;
+          width: 18px;
+          height: 18px;
+          background-color: $gold_color;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 6px;
+            width: 4px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .form__checkmark {
+          position: absolute;
+          top: -3px;
+          left: 40%;
+          width: 18px;
+          height: 18px;
+          background-color: $gold_color;
+          cursor: pointer;
     }
   }
 }

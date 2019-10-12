@@ -12,14 +12,14 @@
 
 <body>
   <div class="body-inner">
-    <header class="header">
+    <section class="header">
       <div class="aside">
-        <p>instagramm</p>
+        <a href="https://www.instagram.com" target="_blank">instagramm</a>
       </div>
       <div class="header__wrap">
-        <div class="header__menu-wrap">
+        <header class="header__menu-wrap">
           <div class="menu">
-            <p class="logo-txt">IC "Repair Design Project"</p>
+            <h1 class="logo-txt">IC "Repair Design Project"</h1>
             <nav class="menu-wrap">
               <ul class="menu-item">
                 <li><a href="#">home</a></li>
@@ -30,13 +30,13 @@
                 <li><a href="#">contacts</a></li>
               </ul>
             </nav>
-            <a class="contact-phone" href="tel:+7(928)768-32-39">+7 (928) 768-32-39</a>
+            <a class="contact-phone" href="tel:+79287683239">+7 (928) 768-32-39</a>
             <button class="menu-btn" type="button"><a href="#">Request a call</a></button>
           </div>
-        </div>
+        </header>
         <div class="header__content">
           <div class="header__text-wrap">
-            <h1>Turnkey Repair in the<br>city of <span>Rostov-on-Don</span></h1>
+            <p class="header__title">Turnkey Repair in the<br>city of <span>Rostov-on-Don</span></p>
             <p>Get ready-made turnkey repairs on time<br> with work time saving up to 45 days and 20% from<br> cost of
               materials
               due to the organization of work
@@ -46,9 +46,13 @@
             <button class="header__btn-left" type="button"><a href="#">CALCULATE THE COST</a></button>
             <button class="header__btn-right" type="button"><a href="#">SUBMIT YOUR APPLICATION</a></button>
           </div>
+          <div class="scroll-btn">
+            Scroll down
+            <div class="scroll-btn__inner-icon"></div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
     <main>
       <section class="projects">
         <div class="projects-wrapper">
@@ -115,7 +119,8 @@
           <div class="on-control__title-icon"></div>
         </div>
         <div class="on-control__video">
-          <video poster="./assets/img/iframe-img.png"></video>
+          <iframe src="https://www.youtube.com/embed/FEmNHefGbvA" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
           <div class="on-control__video-overlay"></div>
           <div class="btn-play">
             <div></div>
@@ -128,25 +133,28 @@
         </p>
         <form class="form">
           <div class="form__flex-box">
-            <fieldset>
+            <fieldset class="form__main-group">
               <label for="name">Name</label>
-              <input type="text" id="name" value="What is your name:">
+              <input type="text" id="name" placeholder="What is your name:">
             </fieldset>
-            <fieldset>
+            <fieldset class="form__main-group">
               <label for="phone">Phone</label>
-              <input type="text" id="phone" value="Your phone number:">
+              <input type="number" id="phone" placeholder="Your phone number:">
             </fieldset>
             <button type="submit">Submit</button>
           </div>
           <fieldset class="form__checkbox">
-            <input type="checkbox" id="agree" checked>
-            <label for="agree">I agree to the processing of personal data</label>
+            <label class="form__checkbox-label" for="agree">
+              <input type="checkbox" id="agree" required>
+              <span class="form__checkmark"></span>
+              I agree to the processing of personal data
+            </label>
           </fieldset>
-
         </form>
       </section>
     </main>
   </div>
+
 </body>
 
 </html>

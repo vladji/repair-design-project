@@ -3,7 +3,7 @@
   width: 82px;
   align-items: center;
 
-  p {
+  a {
     @include futura-font(14px, $gold_color, uppercase);
     transform: rotate(90deg);
 
@@ -27,6 +27,7 @@
 
 .logo-txt {
   @include futura-font(14px, $gold_color, uppercase);
+  cursor: pointer;
 }
 
 .header__wrap {
@@ -42,12 +43,13 @@
   }
 
   .header__content {
-    padding: 14% 0 15% 5%;
-    background-image: url("../assets/img/header-layer.png");
+    position: relative;
+    padding: 12% 0 13% 5%;
+    background: url("../assets/img/header-layer.png") no-repeat;
   }
 
   .header__text-wrap {
-    h1 {
+    .header__title {
       @include yeseva-font(2.5rem, $white_color, uppercase);
       line-height: 3.2rem;
       span {
@@ -75,5 +77,3 @@
     }
   }
 }
-
-

@@ -65,6 +65,10 @@ body {
   background-color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Futura";
   src: url("../assets/fonts/futurabookc.otf") format("opentype");
@@ -111,14 +115,14 @@ body {
 }
 
 .btn-play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 85px;
   height: 85px;
   -webkit-box-pack: center;
@@ -129,6 +133,9 @@ body {
           align-items: center;
   border-radius: 50%;
   background-color: #e3b873;
+  z-index: 1;
+  -webkit-transition: background-color 1s ease-out 0.1s, z-index 1s ease-out 0.1s;
+  transition: background-color 1s ease-out 0.1s, z-index 1s ease-out 0.1s;
 }
 
 .btn-play div {
@@ -136,6 +143,36 @@ body {
           transform: translate(33%);
   border: 20px solid transparent;
   border-left: 25px solid #fff;
+}
+
+.scroll-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -48px;
+  left: -82px;
+  padding: 3% 4%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #131313;
+  cursor: default;
+}
+
+.scroll-btn .scroll-btn__inner-icon {
+  width: 29px;
+  height: 29px;
+  margin-left: 15px;
+  background: url("../assets/img/scroll-btn-inner-icon.svg") no-repeat;
+  cursor: pointer;
 }
 
 .aside {
@@ -148,7 +185,7 @@ body {
           align-items: center;
 }
 
-.aside p {
+.aside a {
   font-family: "Futura", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -157,7 +194,7 @@ body {
           transform: rotate(90deg);
 }
 
-.aside p::after {
+.aside a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -180,6 +217,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   color: #e3b873;
+  cursor: pointer;
 }
 
 .header__wrap {
@@ -222,11 +260,12 @@ body {
 }
 
 .header__wrap .header__content {
-  padding: 14% 0 15% 5%;
-  background-image: url("../assets/img/header-layer.png");
+  position: relative;
+  padding: 12% 0 13% 5%;
+  background: url("../assets/img/header-layer.png") no-repeat;
 }
 
-.header__wrap .header__text-wrap h1 {
+.header__wrap .header__text-wrap .header__title {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -234,7 +273,7 @@ body {
   line-height: 3.2rem;
 }
 
-.header__wrap .header__text-wrap h1 span {
+.header__wrap .header__text-wrap .header__title span {
   color: #e3b873;
 }
 
@@ -565,6 +604,7 @@ main {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   background-image: url("../assets/img/arrow-raw.png");
+  cursor: pointer;
 }
 
 .projects__addition-info .projects__control-dot {
@@ -572,18 +612,21 @@ main {
   height: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 .projects__addition-info .projects__control-dot_active {
   width: 13px;
   height: 13px;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .projects__addition-info .projects__control-right-arrow {
   width: 42px;
   height: 14px;
   background-image: url("../assets/img/arrow-raw.png");
+  cursor: pointer;
 }
 
 .on-control {
@@ -597,9 +640,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 53%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .on-control .form label {
@@ -611,15 +655,74 @@ main {
   color: rgba(54, 54, 54, 0.5);
 }
 
-.on-control .form input[type="text"] {
+.on-control .form input[type="text"],
+.on-control .form input[type="number"] {
+  padding-bottom: 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1.1rem;
   color: #363636;
 }
 
-.on-control .form .form__checkbox label {
-  display: inline;
+.on-control .form .form__checkbox {
+  margin-top: 2%;
+}
+
+.on-control .form .form__checkbox .form__checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #181818;
+}
+
+.on-control .form .form__checkbox input {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.on-control .form .form__checkbox input:checked .form__checkmark {
+  position: absolute;
+  top: -3px;
+  left: 40%;
+  width: 18px;
+  height: 18px;
+  background-color: #e3b873;
+  cursor: pointer;
+}
+
+.on-control .form .form__checkbox input:checked .form__checkmark::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.on-control .form .form__checkbox .form__checkmark {
+  position: absolute;
+  top: -3px;
+  left: 40%;
+  width: 18px;
+  height: 18px;
+  background-color: #e3b873;
+  cursor: pointer;
 }
 
 .on-control .form button {
@@ -690,9 +793,8 @@ main {
 
 .on-control__video {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 56%;
+  height: 435px;
   margin: 2% auto 0;
   -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
@@ -710,6 +812,11 @@ main {
   background-color: #e3b873;
 }
 
+.on-control__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .on-control__video .on-control__video-overlay {
   position: absolute;
   top: 0;
@@ -717,6 +824,15 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  -webkit-transition: background-color 1s ease-out .1s, z-index 1s ease-out .1s;
+  transition: background-color 1s ease-out .1s, z-index 1s ease-out .1s;
+}
+
+.on-control__video:hover .btn-play,
+.on-control__video:hover .on-control__video-overlay {
+  background-color: transparent;
+  z-index: -1;
 }
 
 .on-control__txt {
