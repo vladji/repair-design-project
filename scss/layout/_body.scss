@@ -7,9 +7,19 @@ body {
 .body-inner {
   max-width: 1440px;
   margin: auto;
+  overflow: hidden;
   background-color: #fff;
 }
 
 a {
   text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+.section-wrapper {
+  width: 86%;
+  margin: auto;
 }

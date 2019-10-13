@@ -1,20 +1,18 @@
-main {
-  width: 100%;
-}
-
-.projects {
-  padding: 8% 0 30% 6%;
+.section-wrapper_projects {
+  padding: 8% 0 30%;
   color: $white_color;
   background-color: #131313;
-  background-image: url('../assets/img/city-Group.png');
+  background-image: url("../assets/img/city-Group.png");
   background-repeat: repeat-x;
   background-position: 0 100%;
   background-blend-mode: overlay;
-
-  @media screen and (max-width: 1170px) {
-    padding: 8% 6% 20%;
-  }
 }
+
+// .projects {
+//   @media screen and (max-width: 1170px) {
+//     padding: 8% 6% 20%;
+//   }
+// }
 
 .projects-wrapper {
   position: relative;
@@ -29,7 +27,7 @@ main {
 
   .projects__txt {
     display: block;
-    width: 37%;
+    width: 40%;
     padding-top: 5%;
 
     @media screen and (max-width: 1170px) {
@@ -66,8 +64,8 @@ main {
   }
 
   .projects__slider {
-    position: relative;
-    width: 63%;
+    position: absolute;
+    left: 40%;
     padding-top: 5%;
     overflow: hidden;
 
@@ -130,7 +128,7 @@ main {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 4%;
+      left: 11.7%;
       width: 55px;
       height: 55px;
       border-radius: 50%;
@@ -138,15 +136,14 @@ main {
       background-image: url("../assets/img/arrow-next_white.png");
       background-repeat: no-repeat;
       background-position: center;
+      cursor: pointer;
     }
   }
 }
 
 .projects__addition-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 37%;
+  width: 40%;
+  margin-top: 4%;
 
   @media screen and (max-width: 1170px) {
     position: static;

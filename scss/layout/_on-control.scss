@@ -1,11 +1,18 @@
-.on-control {
+.shift-section-on-control {
   position: relative;
-  top: -320px;
+  height: 850px;
+}
+
+.on-control {
+  position: absolute;
+  top: -300px;
+  width: 100%;
   text-align: center;
+  color: $dark_color;
   background-color: transparent;
 
-  .form {
-    @include form(rgba(54, 54, 54, 0.5), $dark_color);
+  .form__on-control {
+    @include form(flex, rgba(54, 54, 54, 0.5), rgba(54, 54, 54, 0.3), 18%);
 
     button {
       @include main-btn(200px, 50px, $font-futura, 0.9rem);
@@ -14,38 +21,7 @@
 }
 
 .on-control__title {
-  h2 {
-    @include yeseva-font(1.25rem, $white_color, uppercase);
-    line-height: 1.75rem;
-  }
-
-  .on-control__title-icon {
-    position: relative;
-    width: 37px;
-    height: 28px;
-    margin: 13px auto 0;
-    background: url("../assets/img/online-cam.png") no-repeat;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 140%;
-      width: 32px;
-      height: 1px;
-      background-color: $gold_color;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 140%;
-      width: 32px;
-      height: 1px;
-      background-color: $gold_color;
-    }
-  }
+  @include section-title($white_color, url("../assets/img/online-cam.png"));
 }
 
 .on-control__video {
@@ -79,7 +55,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
-    transition: background-color 1s ease-out .1s, z-index 1s ease-out .1s;
+    transition: background-color 1s ease-out 0.1s, z-index 1s ease-out 0.1s;
   }
 
   &:hover {
@@ -94,6 +70,6 @@
 .on-control__txt {
   width: 680px;
   margin: 8% auto;
-  @include futura-font(1.25rem, $dark_color, none);
+  @include futura-font(1.25rem, inherit, none);
   line-height: 2.13rem;
 }

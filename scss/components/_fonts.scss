@@ -11,7 +11,7 @@
 }
 
 @mixin yeseva-font($size, $color, $trans) {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   text-transform: $trans;
   font-size: $size;
   color: $color;

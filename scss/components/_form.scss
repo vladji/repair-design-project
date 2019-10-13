@@ -1,16 +1,18 @@
-@mixin form($label_color, $input_color) {
-  .form__flex-box {
-    display: flex;
-    width: 53%;
-    margin: auto;
-    justify-content: space-around;
+@mixin form($display, $label_color, $underline, $width_main-group) {
+  .form__display {
+    display: $display;
+    justify-content: center;
   }
 
   .form__main-group {
-    // border-top: 0;
-    // border-left: 0;
-    // border-right: 0;
-    // border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    width: $width_main-group;
+    height: 45px;
+    margin-right: 3%;
+    text-align: left;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $underline;
   }
 
   label {
@@ -21,12 +23,14 @@
 
   input[type="text"],
   input[type="number"] {
-    padding-bottom: 5px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-    @include futura-font(1.1rem, $input_color, none);
+    padding-top: 1%;
+    border: 0;
+    @include futura-font(1.1rem, inherit, none);
+    background-color: transparent;
+
+    &::placeholder {
+      color: inherit;
+    }
   }
 
   .form__checkbox {
@@ -41,43 +45,38 @@
     }
 
     input {
-      position: absolute;
-      width: 0;
-      height: 0;
+      position: relative;
+      left: 18px;
+      opacity: 0;
 
-      &:checked {
-        .form__checkmark {
-          position: absolute;
-          top: -3px;
-          left: 40%;
-          width: 18px;
-          height: 18px;
-          background-color: $gold_color;
-          cursor: pointer;
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 3px;
-            left: 6px;
-            width: 4px;
-            height: 7px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-          }
-        }
+      &:checked + .form__checkmark::after {
+        display: block;
       }
     }
 
     .form__checkmark {
-          position: absolute;
-          top: -3px;
-          left: 40%;
-          width: 18px;
-          height: 18px;
-          background-color: $gold_color;
-          cursor: pointer;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      margin-right: 7px;
+      border-radius: 2px;
+      background-color: $gold_color;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 3px;
+        left: 6px;
+        width: 4px;
+        height: 7px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
     }
   }
 }
