@@ -134,7 +134,7 @@
             can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast
             from one of our facilities! Leave a request below and you will receive a link to the broadcast.
           </p>
-          <form class="form__on-control">
+          <form class="form">
             <div class="form__display">
               <fieldset class="form__main-group">
                 <label for="name">Name</label>
@@ -213,10 +213,16 @@
         </div>
         <div class="types-repair__request">
           <div class="types-repair__bullets-wrapper">
-            <div class="types-repair__bullets-round"></div>
+            <div class="types-repair__bullets-round-wrapper">
+              <img src="./assets/img/types-repair-bckg.png" alt="backg img">
+              <div class="types-repair__bullets-round">
+                <div></div>
+              </div>
+            </div>
             <div class="types-repair__bullets-tips">
               <ul>
-                <li><span></span>Our specialist will arrive for measurements per day contact, or appoint a date convenient for you</li>
+                <li><span></span>Our specialist will arrive for measurements per day contact, or appoint a date
+                  convenient for you</li>
                 <li><span></span>Free metering</li>
                 <li><span></span>Free consultation</li>
                 <li><span></span>Get a cost estimate and the timing of your future repairs</li>
@@ -225,20 +231,24 @@
           </div>
           <div class="types-repair__form">
             <p>Leave a request for free<br>departure of the measurer</p>
-            <form class="form__types-repair">
+            <form class="form form_repair">
               <div class="form__display">
                 <fieldset class="form__main-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" placeholder="What is your name:">
+                  <label for="name__types">Name</label>
+                  <input type="text" id="name__types" placeholder="What is your name:">
                 </fieldset>
                 <fieldset class="form__main-group">
-                  <label for="phone">Phone</label>
-                  <input type="number" id="phone" placeholder="Your phone number:">
+                  <label for="phone__types">Phone</label>
+                  <input type="number" id="phone__types" placeholder="Your phone number:">
+                </fieldset>
+                <fieldset class="form__main-group">
+                  <label for="email__types">Email</label>
+                  <input type="email__types" id="email" placeholder="Your email:">
                 </fieldset>
               </div>
               <fieldset class="form__checkbox">
-                <label class="form__checkbox-label" for="agree">
-                  <input type="checkbox" id="agree" checked required>
+                <label class="form__checkbox-label" for="agree__types">
+                  <input type="checkbox" id="agree__types" checked required>
                   <span class="form__checkmark"></span>
                   I agree to the processing of personal data
                 </label>

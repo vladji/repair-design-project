@@ -1,0 +1,106 @@
+.types-repair {
+  text-align: center;
+}
+
+.types-repair__title {
+  @include section-title(#181818, url("../assets/img/types-repair-icon.png"));
+}
+
+.types-repair__gallery {
+  @include img-3-col();
+}
+
+.col__btn {
+  @include main-btn(228px, 54px, $font-yeseva, 1.1rem);
+  transform: translate(-35px, 50%);
+}
+
+.types-repair__request {
+  display: flex;
+  justify-content: space-between;
+  padding: 32% 0 25%;
+}
+
+.types-repair__bullets-wrapper {
+  position: relative;
+  width: 60%;
+  text-align: left;
+  color: $dark_color;
+
+  .types-repair__bullets-round-wrapper {
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+    // left: -31%;
+    // width: 50vw;
+  }
+
+  img {
+    position: relative;
+    width: 96%;
+    top: -10%;
+    left: -15%;
+    z-index: 11;
+  }
+
+  .types-repair__bullets-round {
+    position: absolute;
+    top: 0;
+    left: -34%;
+    width: 636px;
+    height: 636px;
+    padding: 3px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #fff 25%, $gold_color);
+
+    div {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  .types-repair__bullets-tips {
+    position: relative;
+    z-index: 11;
+  }
+}
+
+.types-repair__form {
+  width: 30%;
+  padding: 28px 50px;
+  color: $white_color;
+  background-color: $back-dark;
+
+  p {
+    margin-bottom: 40px;
+    @include futura-font(1.25rem, $white_color, none);
+  }
+}
+
+.form {
+  @include form(block, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15), 100%);
+
+  button {
+    @include main-btn(213px, 50px, $font-futura, 0.8rem);
+  }
+}
+
+.form.form_repair {
+  .form__main-group:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  .form__checkbox-label {
+    justify-content: left;
+    transform: translate(-20px);
+    margin-top: 17px;
+  }
+
+  button {
+    margin-top: 40px;
+    float: right;
+  }
+}

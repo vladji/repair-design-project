@@ -13,35 +13,35 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid $underline;
-  }
 
-  label {
-    display: block;
-    text-align: left;
-    @include futura-font(0.9rem, $label_color, none);
-  }
+    label {
+      display: block;
+      text-align: left;
+      @include futura-font(0.9rem, $label_color, none);
+    }
 
-  input[type="text"],
-  input[type="number"] {
-    padding-top: 1%;
-    border: 0;
-    @include futura-font(1.1rem, inherit, none);
-    background-color: transparent;
+    input {
+      padding-top: 1%;
+      border: 0;
+      @include futura-font(1.1rem, inherit, none);
+      background-color: transparent;
 
-    &::placeholder {
-      color: inherit;
+      &::placeholder {
+        color: inherit;
+      }
     }
   }
 
   .form__checkbox {
     margin-top: 2%;
+    @include futura-font(1rem, inherit, none);
 
     .form__checkbox-label {
       display: flex;
       position: relative;
       justify-content: center;
       align-items: center;
-      color: #181818;
+      // color: inherit;
     }
 
     input {

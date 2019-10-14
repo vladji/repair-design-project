@@ -642,7 +642,7 @@ main {
   background-color: transparent;
 }
 
-.on-control .form__on-control .form__display {
+.on-control .form .form__display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,7 +651,7 @@ main {
           justify-content: center;
 }
 
-.on-control .form__on-control .form__main-group {
+.on-control .form .form__main-group {
   width: 18%;
   height: 45px;
   margin-right: 3%;
@@ -662,7 +662,7 @@ main {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
 
-.on-control .form__on-control label {
+.on-control .form .form__main-group label {
   display: block;
   text-align: left;
   font-family: "Futura", sans-serif;
@@ -671,8 +671,7 @@ main {
   color: rgba(54, 54, 54, 0.5);
 }
 
-.on-control .form__on-control input[type="text"],
-.on-control .form__on-control input[type="number"] {
+.on-control .form .form__main-group input {
   padding-top: 1%;
   border: 0;
   font-family: "Futura", sans-serif;
@@ -682,31 +681,31 @@ main {
   background-color: transparent;
 }
 
-.on-control .form__on-control input[type="text"]::-webkit-input-placeholder,
-.on-control .form__on-control input[type="number"]::-webkit-input-placeholder {
+.on-control .form .form__main-group input::-webkit-input-placeholder {
   color: inherit;
 }
 
-.on-control .form__on-control input[type="text"]:-ms-input-placeholder,
-.on-control .form__on-control input[type="number"]:-ms-input-placeholder {
+.on-control .form .form__main-group input:-ms-input-placeholder {
   color: inherit;
 }
 
-.on-control .form__on-control input[type="text"]::-ms-input-placeholder,
-.on-control .form__on-control input[type="number"]::-ms-input-placeholder {
+.on-control .form .form__main-group input::-ms-input-placeholder {
   color: inherit;
 }
 
-.on-control .form__on-control input[type="text"]::placeholder,
-.on-control .form__on-control input[type="number"]::placeholder {
+.on-control .form .form__main-group input::placeholder {
   color: inherit;
 }
 
-.on-control .form__on-control .form__checkbox {
+.on-control .form .form__checkbox {
   margin-top: 2%;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+  color: inherit;
 }
 
-.on-control .form__on-control .form__checkbox .form__checkbox-label {
+.on-control .form .form__checkbox .form__checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,20 +716,19 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #181818;
 }
 
-.on-control .form__on-control .form__checkbox input {
+.on-control .form .form__checkbox input {
   position: relative;
   left: 18px;
   opacity: 0;
 }
 
-.on-control .form__on-control .form__checkbox input:checked + .form__checkmark::after {
+.on-control .form .form__checkbox input:checked + .form__checkmark::after {
   display: block;
 }
 
-.on-control .form__on-control .form__checkbox .form__checkmark {
+.on-control .form .form__checkbox .form__checkmark {
   position: relative;
   top: 0;
   left: 0;
@@ -742,7 +740,7 @@ main {
   cursor: pointer;
 }
 
-.on-control .form__on-control .form__checkbox .form__checkmark::after {
+.on-control .form .form__checkbox .form__checkmark::after {
   content: "";
   position: absolute;
   display: none;
@@ -756,7 +754,7 @@ main {
           transform: rotate(45deg);
 }
 
-.on-control .form__on-control button {
+.on-control .form button {
   width: 200px;
   height: 50px;
   border-radius: 2px;
@@ -770,7 +768,7 @@ main {
   cursor: pointer;
 }
 
-.on-control .form__on-control button a {
+.on-control .form button a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1020,7 +1018,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20% 0 25%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32% 0 25%;
 }
 
 .types-repair__bullets-wrapper {
@@ -1030,37 +1031,68 @@ main {
   color: #363636;
 }
 
+.types-repair__bullets-wrapper .types-repair__bullets-round-wrapper {
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  height: 100%;
+}
+
+.types-repair__bullets-wrapper img {
+  position: relative;
+  width: 96%;
+  top: -10%;
+  left: -15%;
+  z-index: 11;
+}
+
 .types-repair__bullets-wrapper .types-repair__bullets-round {
   position: absolute;
   top: 0;
-  left: -32%;
+  left: -34%;
   width: 636px;
   height: 636px;
-  border: 2px solid #000;
+  padding: 3px;
   border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #fff), to(#e3b873));
+  background: linear-gradient(to right, #fff 25%, #e3b873);
+}
+
+.types-repair__bullets-wrapper .types-repair__bullets-round div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.types-repair__bullets-wrapper .types-repair__bullets-tips {
+  position: relative;
+  z-index: 11;
 }
 
 .types-repair__form {
-  width: 40%;
+  width: 30%;
+  padding: 28px 50px;
   color: #fff;
   background-color: #131313;
 }
 
 .types-repair__form p {
+  margin-bottom: 40px;
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1.25rem;
   color: #fff;
 }
 
-.form__types-repair .form__display {
+.form .form__display {
   display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.form__types-repair .form__main-group {
+.form .form__main-group {
   width: 100%;
   height: 45px;
   margin-right: 3%;
@@ -1071,7 +1103,7 @@ main {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.form__types-repair label {
+.form .form__main-group label {
   display: block;
   text-align: left;
   font-family: "Futura", sans-serif;
@@ -1080,8 +1112,7 @@ main {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.form__types-repair input[type="text"],
-.form__types-repair input[type="number"] {
+.form .form__main-group input {
   padding-top: 1%;
   border: 0;
   font-family: "Futura", sans-serif;
@@ -1091,31 +1122,31 @@ main {
   background-color: transparent;
 }
 
-.form__types-repair input[type="text"]::-webkit-input-placeholder,
-.form__types-repair input[type="number"]::-webkit-input-placeholder {
+.form .form__main-group input::-webkit-input-placeholder {
   color: inherit;
 }
 
-.form__types-repair input[type="text"]:-ms-input-placeholder,
-.form__types-repair input[type="number"]:-ms-input-placeholder {
+.form .form__main-group input:-ms-input-placeholder {
   color: inherit;
 }
 
-.form__types-repair input[type="text"]::-ms-input-placeholder,
-.form__types-repair input[type="number"]::-ms-input-placeholder {
+.form .form__main-group input::-ms-input-placeholder {
   color: inherit;
 }
 
-.form__types-repair input[type="text"]::placeholder,
-.form__types-repair input[type="number"]::placeholder {
+.form .form__main-group input::placeholder {
   color: inherit;
 }
 
-.form__types-repair .form__checkbox {
+.form .form__checkbox {
   margin-top: 2%;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+  color: inherit;
 }
 
-.form__types-repair .form__checkbox .form__checkbox-label {
+.form .form__checkbox .form__checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1126,20 +1157,19 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #181818;
 }
 
-.form__types-repair .form__checkbox input {
+.form .form__checkbox input {
   position: relative;
   left: 18px;
   opacity: 0;
 }
 
-.form__types-repair .form__checkbox input:checked + .form__checkmark::after {
+.form .form__checkbox input:checked + .form__checkmark::after {
   display: block;
 }
 
-.form__types-repair .form__checkbox .form__checkmark {
+.form .form__checkbox .form__checkmark {
   position: relative;
   top: 0;
   left: 0;
@@ -1151,7 +1181,7 @@ main {
   cursor: pointer;
 }
 
-.form__types-repair .form__checkbox .form__checkmark::after {
+.form .form__checkbox .form__checkmark::after {
   content: "";
   position: absolute;
   display: none;
@@ -1165,7 +1195,7 @@ main {
           transform: rotate(45deg);
 }
 
-.form__types-repair button {
+.form button {
   width: 213px;
   height: 50px;
   border-radius: 2px;
@@ -1179,7 +1209,7 @@ main {
   cursor: pointer;
 }
 
-.form__types-repair button a {
+.form button a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1193,5 +1223,23 @@ main {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.form.form_repair .form__main-group:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.form.form_repair .form__checkbox-label {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-transform: translate(-20px);
+          transform: translate(-20px);
+  margin-top: 17px;
+}
+
+.form.form_repair button {
+  margin-top: 40px;
+  float: right;
 }
 /*# sourceMappingURL=main.css.map */

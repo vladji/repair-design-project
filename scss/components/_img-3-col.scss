@@ -1,0 +1,51 @@
+@mixin img-3-col() {
+  display: grid;
+  margin-top: 30px;;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  justify-content: center;
+
+  .col {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .col__txt-block {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      width: 80%;
+      padding: 25px 0 0 35px;
+      transform: translate(-50%);
+      text-align: left;
+      background-color: $white_color;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+      h3 {
+        @include yeseva-font(1.1rem, $dark_color, none);
+      }
+
+      ul {
+        @include futura-font(0.9rem, $grey_color, none);
+        margin-top: 13px;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+
+        span {
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          margin-right: 4px;
+          border-radius: 50%;
+          background-color: $grey_color;
+        }
+      }
+    }
+  }
+}
