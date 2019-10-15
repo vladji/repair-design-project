@@ -38,7 +38,7 @@
 
   img {
     position: relative;
-    width: 96%;
+    width: 700px;
     top: -10%;
     left: -15%;
     z-index: 11;
@@ -52,7 +52,7 @@
     height: 636px;
     padding: 3px;
     border-radius: 50%;
-    background: linear-gradient(to right, #fff 25%, $gold_color);
+    background: linear-gradient(to right, #fff 30%, $gold_color 120%);
 
     div {
       width: 100%;
@@ -61,34 +61,74 @@
       background-color: #fff;
     }
   }
+}
 
-  .types-repair__bullets-tips {
-    position: relative;
-    z-index: 11;
+.bullets-tips {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: 100%;
+  @include futura-font(1.12rem, $dark_color, none);
+
+  li {
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+
+  .bullets-tips__one {
+    top: -4%;
+    left: 36%;
+  }
+
+  .bullets-tips__two {
+    top: 14%;
+    left: 46%;
+  }
+
+  .bullets-tips__three {
+    top: 38%;
+    left: 49%;
+  }
+
+  .bullets-tips__four {
+    top: 61%;
+    left: 43%;
+  }
+
+  div {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    border-radius: 50%;
+    @include yeseva-font(1.12rem, $white_color, none);
+    background-color: $gold_color;
+    box-shadow: 0px 0px 0px 15px #fff;
   }
 }
 
-.types-repair__form {
-  width: 30%;
+.types-repair__from-wrapper {
+  width: 40%;
+}
+
+.form {
+  @include form(block, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15), 100%);
+}
+
+.form.form_repair {
   padding: 28px 50px;
   color: $white_color;
   background-color: $back-dark;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 
   p {
     margin-bottom: 40px;
     @include futura-font(1.25rem, $white_color, none);
   }
-}
 
-.form {
-  @include form(block, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15), 100%);
-
-  button {
-    @include main-btn(213px, 50px, $font-futura, 0.8rem);
-  }
-}
-
-.form.form_repair {
   .form__main-group:not(:last-child) {
     margin-bottom: 50px;
   }
@@ -99,8 +139,36 @@
     margin-top: 17px;
   }
 
+  .vertical-form-btn-wrap {
+    text-align: right;
+  }
+
   button {
     margin-top: 40px;
-    float: right;
+    @include main-btn(213px, 50px, $font-futura, 0.8rem);
+  }
+}
+
+.motive-txt {
+  display: flex;
+  align-items: center;
+  padding: 38px 0 0 20px;
+
+  .motive-txt__icon {
+    display: flex;
+    width: 72px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: $gold_color;
+    box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+  }
+
+
+  p {
+    margin-left: 25px;
+    @include futura-font(1.25rem, $gold_color, none);
+    text-align: left;
   }
 }
