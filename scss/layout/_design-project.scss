@@ -1,0 +1,21 @@
+.design-project {
+  position: relative;
+  padding: 12% 0 20%;
+}
+
+.design-project__title {
+  @include section-title($darkness_color, url("../assets/img/desgin-project-icon.png"));
+}
+
+.design-project__txt {
+  padding: 25px 0 45px;
+  text-align: center;
+  @include futura-font(1.25rem, $dark_color, none);
+  line-height: 1.69rem;
+}
+
+.design-project__gallery {
+  position: absolute;
+  top: 53%;
+  @include img-3-col();
+}

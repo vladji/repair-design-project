@@ -1,5 +1,6 @@
 @mixin section-title($h2_color, $bckg_img) {
   h2 {
+    text-align: center;
     @include yeseva-font(1.25rem, $h2_color, uppercase);
     line-height: 1.75rem;
   }

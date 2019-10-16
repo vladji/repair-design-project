@@ -3,6 +3,11 @@
   src: url("../assets/fonts/futurabookc.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../assets/fonts/Proxima-Nova.ttf") format("truetype");
+}
+
 @mixin futura-font($size, $color, $trans) {
   font-family: "Futura", sans-serif;
   text-transform: $trans;
@@ -12,6 +17,13 @@
 
 @mixin yeseva-font($size, $color, $trans) {
   font-family: "Yeseva One", cursive;
+  text-transform: $trans;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin proxima-font($size, $color, $trans) {
+  font-family: "Proxima Nova", sans-serif;
   text-transform: $trans;
   font-size: $size;
   color: $color;
