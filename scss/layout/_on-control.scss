@@ -1,9 +1,8 @@
-.shift-section-on-control {
+.on-control {
   position: relative;
-  height: 850px;
 }
 
-.on-control {
+.on-control__inner {
   position: absolute;
   top: -300px;
   width: 100%;
