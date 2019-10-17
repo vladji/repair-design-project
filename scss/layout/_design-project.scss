@@ -4,7 +4,7 @@
 }
 
 .design-project__title {
-  @include section-title($darkness_color, url("../assets/img/desgin-project-icon.png"));
+  @include section-title-icon($darkness_color, url("../assets/img/desgin-project-icon.png"));
 }
 
 .design-project__txt {

@@ -1,0 +1,17 @@
+%section-title-txt {
+  @include yeseva-font(1.7rem, $gold_color, uppercase);
+  line-height: 2.3rem;
+
+  span {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 115%;
+      width: 50%;
+      height: 1px;
+      background-color: $gold_color;
+    }
+  }
+}

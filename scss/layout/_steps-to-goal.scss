@@ -1,0 +1,36 @@
+.steps {
+  padding: 33% 0;
+  background-color: $back-dark;
+  @extend %pagination-btn;
+
+  .section-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps__left-block {
+    width: 340px;
+
+    h2 {
+      @extend %section-title-txt;
+
+      span::after {
+        left: 155%;
+      }
+    }
+
+    .steps__title {
+      @include yeseva-font(0.94rem, $gold_color, uppercase);
+    }
+
+    .steps__txt {
+      margin-top: 16px;
+      @include futura-font(0.94rem, $white_color, none);
+      line-height: 1.56rem;
+    }
+  }
+}
+
+.intro-txt {
+  @include futura-font(0.94rem, $white_color, uppercase);
+}

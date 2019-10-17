@@ -3,7 +3,7 @@
 }
 
 .types-repair__title {
-  @include section-title(#181818, url("../assets/img/types-repair-icon.png"));
+  @include section-title-icon(#181818, url("../assets/img/types-repair-icon.png"));
 }
 
 .types-repair__gallery {

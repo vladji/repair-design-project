@@ -21,7 +21,7 @@
 }
 
 .on-control__title {
-  @include section-title($white_color, url("../assets/img/online-cam.png"));
+  @include section-title-icon($white_color, url("../assets/img/online-cam.png"));
 }
 
 .on-control__video {

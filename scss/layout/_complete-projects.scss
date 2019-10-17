@@ -1,4 +1,4 @@
-.section-wrapper_projects {
+.projects-wrapper {
   padding: 8% 0 30%;
   color: $white_color;
   background-color: #131313;
@@ -6,13 +6,13 @@
   background-repeat: repeat-x;
   background-position: 0 100%;
   background-blend-mode: overlay;
+
+  .section-wrapper {
+    position: relative;
+  }
 }
 
-.projects-wrapper {
-  position: relative;
-}
-
-.projects__main-block {
+.projects__left-block {
   display: flex;
 
   @media screen and (max-width: 1170px) {
@@ -29,21 +29,7 @@
     }
 
     h2 {
-      @include yeseva-font(1.7rem, $gold_color, uppercase);
-      line-height: 2.3rem;
-
-      span {
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 115%;
-          width: 50%;
-          height: 1px;
-          background-color: $gold_color;
-        }
-      }
+      @extend %section-title-txt;
     }
 
     p {
@@ -172,44 +158,11 @@
     }
   }
 
-  .projects__control-wrap {
-    display: flex;
-    width: 44%;
-    align-items: center;
-    justify-content: space-between;
+  .projects__pagination {
+    @extend %pagination-btn;
 
     @media screen and (max-width: 1170px) {
       display: none;
     }
-  }
-
-  .projects__control-left-arrow {
-    width: 42px;
-    height: 14px;
-    transform: rotate(180deg);
-    background-image: url("../assets/img/arrow-raw.png");
-    cursor: pointer;
-  }
-
-  .projects__control-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-
-    &_active {
-      width: 13px;
-      height: 13px;
-      background-color: $white_color;
-      cursor: pointer;
-    }
-  }
-
-  .projects__control-right-arrow {
-    width: 42px;
-    height: 14px;
-    background-image: url("../assets/img/arrow-raw.png");
-    cursor: pointer;
   }
 }
