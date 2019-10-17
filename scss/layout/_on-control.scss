@@ -12,7 +12,7 @@
   background-color: transparent;
 
   .form {
-    @include form(flex, rgba(54, 54, 54, 0.5), rgba(54, 54, 54, 0.3), 18%);
+    @include form(flex, $grey_color, rgba(54, 54, 54, 0.3), 18%);
 
     button {
       @include main-btn(200px, 50px, $font-futura, 0.9rem);

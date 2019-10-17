@@ -3,6 +3,7 @@
   align-items: center;
 
   .pagination-counter {
+    margin-bottom: 22px;
     @include yeseva-font(1.13rem, $white_color, none);
   }
 
@@ -37,6 +38,7 @@
   .control-right-arrow {
     width: 42px;
     height: 14px;
+    margin-left: 30px;
     background-image: url("../assets/img/arrow-raw.png");
     cursor: pointer;
   }

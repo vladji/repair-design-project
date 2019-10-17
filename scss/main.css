@@ -190,7 +190,7 @@ main {
   cursor: pointer;
 }
 
-.projects__addition-info .projects__pagination, .steps {
+.projects__addition-info .projects__pagination, .steps, .steps .steps__left-block .steps__pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,14 +199,15 @@ main {
           align-items: center;
 }
 
-.projects__addition-info .projects__pagination .pagination-counter, .steps .pagination-counter {
+.projects__addition-info .projects__pagination .pagination-counter, .steps .pagination-counter, .steps .steps__left-block .steps__pagination .pagination-counter {
+  margin-bottom: 22px;
   font-family: "Yeseva One", cursive;
   text-transform: none;
   font-size: 1.13rem;
   color: #fff;
 }
 
-.projects__addition-info .projects__pagination .control-left-arrow, .steps .control-left-arrow {
+.projects__addition-info .projects__pagination .control-left-arrow, .steps .control-left-arrow, .steps .steps__left-block .steps__pagination .control-left-arrow {
   width: 42px;
   height: 14px;
   margin-right: 30px;
@@ -216,7 +217,7 @@ main {
   cursor: pointer;
 }
 
-.projects__addition-info .projects__pagination .control-dot, .steps .control-dot {
+.projects__addition-info .projects__pagination .control-dot, .steps .control-dot, .steps .steps__left-block .steps__pagination .control-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -224,20 +225,21 @@ main {
   cursor: pointer;
 }
 
-.projects__addition-info .projects__pagination .control-dot_active, .steps .control-dot_active {
+.projects__addition-info .projects__pagination .control-dot_active, .steps .control-dot_active, .steps .steps__left-block .steps__pagination .control-dot_active {
   width: 13px;
   height: 13px;
   background-color: #fff;
   cursor: pointer;
 }
 
-.projects__addition-info .projects__pagination span:not(:last-of-type), .steps span:not(:last-of-type) {
+.projects__addition-info .projects__pagination span:not(:last-of-type), .steps span:not(:last-of-type), .steps .steps__left-block .steps__pagination span:not(:last-of-type) {
   margin-right: 18px;
 }
 
-.projects__addition-info .projects__pagination .control-right-arrow, .steps .control-right-arrow {
+.projects__addition-info .projects__pagination .control-right-arrow, .steps .control-right-arrow, .steps .steps__left-block .steps__pagination .control-right-arrow {
   width: 42px;
   height: 14px;
+  margin-left: 30px;
   background-image: url("../assets/img/arrow-raw.png");
   cursor: pointer;
 }
@@ -540,7 +542,7 @@ main {
   font-family: "Yeseva One", cursive;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: #959595;
 }
 
 @media screen and (max-width: 1170px) {
@@ -708,7 +710,7 @@ main {
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 0.9rem;
-  color: rgba(54, 54, 54, 0.5);
+  color: #959595;
 }
 
 .on-control .form .form__main-group input {
@@ -1578,7 +1580,7 @@ main {
 }
 
 .steps {
-  padding: 33% 0;
+  padding: 35% 0;
   background-color: #131313;
 }
 
@@ -1593,6 +1595,12 @@ main {
 
 .steps .steps__left-block {
   width: 340px;
+  -webkit-transform: translate(0px, -15%);
+          transform: translate(0px, -15%);
+}
+
+.steps .steps__left-block h2 {
+  margin-bottom: 92px;
 }
 
 .steps .steps__left-block h2 span::after {
@@ -1604,6 +1612,7 @@ main {
   text-transform: uppercase;
   font-size: 0.94rem;
   color: #e3b873;
+  line-height: 1.44rem;
 }
 
 .steps .steps__left-block .steps__txt {
@@ -1615,7 +1624,109 @@ main {
   line-height: 1.56rem;
 }
 
+.steps .steps__left-block .steps__pagination {
+  margin-top: 100px;
+}
+
+.steps .steps__right-block img {
+  margin-top: 45px;
+}
+
+.steps .steps__right-block .show-projets {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 36px;
+      grid-template-areas: "item1 item2 item3" "item4 item5 item6";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.steps .steps__right-block .show-projets__item_1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: item1;
+}
+
+.steps .steps__right-block .show-projets__item_2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: item2;
+}
+
+.steps .steps__right-block .show-projets__item_3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: item3;
+}
+
+.steps .steps__right-block .show-projets__item_4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: item4;
+}
+
+.steps .steps__right-block .show-projets__item_5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: item5;
+}
+
+.steps .steps__right-block .show-projets__item_6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: item6;
+}
+
+.steps .steps__right-block .show-projets__item {
+  position: relative;
+  font-family: "Futura", sans-serif;
+  text-transform: none;
+  font-size: 0.94rem;
+  color: inherit;
+  line-height: 1.13rem;
+}
+
+.steps .steps__right-block .show-projets__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #13131381;
+  z-index: 122;
+}
+
+.steps .steps__right-block .show-projets__item span {
+  position: relative;
+  font-family: "Yeseva One", cursive;
+  text-transform: none;
+  font-size: 0.94rem;
+  color: inherit;
+}
+
+.steps .steps__right-block .show-projets__item span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -15%;
+  width: 100%;
+  height: 1px;
+  background-color: #e3b873;
+}
+
+.steps .steps__right-block .show-projets__item p {
+  margin-top: 17px;
+}
+
+.steps .steps__right-block .show-projets__item_active::before {
+  display: none;
+}
+
 .intro-txt {
+  margin-bottom: 18px;
   font-family: "Futura", sans-serif;
   text-transform: uppercase;
   font-size: 0.94rem;

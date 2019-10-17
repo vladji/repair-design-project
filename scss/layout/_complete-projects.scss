@@ -57,7 +57,7 @@
       position: absolute;
       top: 0;
       display: flex;
-      @include yeseva-font(0.9rem, rgba(255, 255, 255, 0.3), uppercase);
+      @include yeseva-font(0.9rem, $grey_color, uppercase);
 
       @media screen and (max-width: 1170px) {
         position: static;
