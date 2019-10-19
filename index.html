@@ -12,7 +12,7 @@
 
 <body>
   <div class="body-inner">
-    <section class="header">
+    <section id="home" class="header">
       <div class="aside">
         <a href="https://www.instagram.com" target="_blank">instagramm</a>
       </div>
@@ -22,12 +22,12 @@
             <h1 class="logo-txt">IC "Repair Design Project"</h1>
             <nav class="menu-wrap">
               <ul class="menu-item">
-                <li><a href="#">home</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">measurment</a></li>
-                <li><a href="#">team</a></li>
-                <li><a href="#">reviews</a></li>
-                <li><a href="#">contacts</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#measurment">measurment</a></li>
+                <li><a href="#team">team</a></li>
+                <li><a href="#reviews">reviews</a></li>
+                <li><a href="#contacts">contacts</a></li>
               </ul>
             </nav>
             <a class="contact-phone" href="tel:+79287683239">+7 (928) 768-32-39</a>
@@ -55,7 +55,7 @@
       </div>
     </section>
     <main>
-      <section class="projects-wrapper">
+      <section id="projects" class="projects-wrapper">
         <div class="section-wrapper">
           <div class="projects__left-block">
             <div class="projects__txt">
@@ -311,7 +311,7 @@
       </section>
       <section class="design-project section-wrapper">
         <div class="design-project__title">
-          <h2>design project</h2>
+          <h2 id="measurment">design project</h2>
           <div class="section__title-icon"></div>
         </div>
         <p class="design-project__txt">Design project not only helps to make the repair of your apartment more
@@ -425,7 +425,7 @@
         </div>
       </section>
       <section class="team">
-        <div class="team__inner">
+        <div id="team" class="team__inner">
           <div class="team__title">
             <h2>our team</h2>
             <div class="section__title-icon"></div>
@@ -477,7 +477,7 @@
       </section>
       <section class="clients">
         <div class="section-wrapper">
-          <div class="clients__title">
+          <div id="reviews" class="clients__title">
             <h2>our clients</h2>
             <div class="section__title-icon"></div>
           </div>
@@ -547,6 +547,68 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <form id="contacts" class="form_footer">
+        <p>have any questions?</p>
+        <div class="form__display">
+          <div class="form__block">
+            <fieldset class="form__main-group">
+              <label for="name__footer">Name</label>
+              <input type="text" id="name__footer" placeholder="What is your name:">
+            </fieldset>
+            <fieldset class="form__main-group">
+              <label for="phone__footer">Phone</label>
+              <input type="number" id="phone__footer" placeholder="Your phone number:">
+            </fieldset>
+          </div>
+          <fieldset class="form__main-group">
+            <label for="text__footer">Question</label>
+            <input type="text" id="text__footer" placeholder="I want to know:">
+          </fieldset>
+        </div>
+        <fieldset class="form__checkbox">
+          <label class="form__checkbox-label" for="agree__footer">
+            <input type="checkbox" id="agree__footer" checked required>
+            <span class="form__checkmark"></span>
+            I agree to the processing of personal data
+          </label>
+        </fieldset>
+        <div class="vertical-form-btn-wrap">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="adress-wrapper">
+        <div class="adress-inner">
+          <p class="adress-org">
+            Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel <a href="tel:+79287683229">+7 (928) 768 32 29</a>
+          </p>
+          <div class="contacts-icon-wrapper">
+            <a class="mail-icon" href="mailto:dsadow@hdsjsjs.com"></a>
+            <a class="insta-icon" href="https://www.instagram.com" target="_blank"></a>
+          </div>
+        </div>
+        <img class="adress-map" src="./assets/img/map-footer.png" alt="our adress">
+      </div>
+      <div class="footer-menu">
+        <div class="section-wrapper">
+          <div class="menu">
+            <h3 class="logo-txt">IC "Repair Design Project"</h3>
+            <nav class="menu-wrap">
+              <ul class="menu-item">
+                <li><a href="#home">home</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#measurment">measurment</a></li>
+                <li><a href="#team">team</a></li>
+                <li><a href="#reviews">reviews</a></li>
+                <li><a href="#contacts">contacts</a></li>
+              </ul>
+            </nav>
+            <a class="contact-phone" href="tel:+79287683239">+7 (928) 768-32-39</a>
+            <button class="menu-btn" type="button"><a href="#">Request a call</a></button>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
 </body>

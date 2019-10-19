@@ -25,11 +25,6 @@
   background-color: #131313;
 }
 
-.logo-txt {
-  @include futura-font(14px, $gold_color, uppercase);
-  cursor: pointer;
-}
-
 .header__wrap {
   display: block;
   width: 94.3%;

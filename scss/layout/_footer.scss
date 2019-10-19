@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  padding-top: 19%;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%),
+    url("../assets/img/footer-bckg.png"), #181818;
+  background-size: cover;
+}
+
+.form_footer {
+  position: absolute;
+  top: -21%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 61%;
+  padding: 3% 13%;
+  @include form(flex, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15));
+  color: $white_color;
+  background-color: $back-dark;
+
+  p {
+    margin-bottom: 45px;
+    text-align: center;
+    @include yeseva-font(1.25rem, inherit, uppercase);
+  }
+
+  .form__block {
+    margin-bottom: 7%;
+    justify-content: space-between;
+  }
+
+  .form__checkbox {
+    margin-top: 6%;
+  }
+
+  .vertical-form-btn-wrap {
+    text-align: center;
+  }
+
+  button {
+    margin-top: 40px;
+    @include main-btn(200px, 50px, $font-futura, 0.9rem);
+  }
+}
+
+.adress-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.adress-org {
+  width: 590px;
+  margin: auto;
+  text-align: center;
+  @include yeseva-font(1.25rem, $gold_color, uppercase);
+  line-height: 1.75rem;
+
+  a {
+    color: $gold_color;
+  }
+}
+
+.contacts-icon-wrapper {
+  display: flex;
+  width: 72px;
+  margin: 26px auto 0;
+  justify-content: space-between;
+
+  a {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $bckg-btn;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.mail-icon {
+  background-image: url("../assets/img/mail-icon.png");
+}
+
+.insta-icon {
+  background-image: url("../assets/img/insta-icon.png");
+}
+
+.adress-map {
+  display: block;
+  margin: 0 auto;
+  padding: 3% 0 5%;
+}
+
+.footer-menu {
+  background-color: $darkness_color;
+
+  .menu {
+    height: 133px;
+  }
+
+  .menu-wrap {
+    width: 46%;
+  }
+
+  .menu-btn {
+    @include main-btn(161px, 37px, $font-futura, 13px);
+  }
+}
