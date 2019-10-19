@@ -8,12 +8,7 @@
 }
 
 .types-repair__gallery {
-  @include img-3-col();
-}
-
-.col__btn {
-  @include main-btn(228px, 54px, $font-yeseva, 1.1rem);
-  transform: translate(-35px, 50%);
+  @include img-3-col(repeat(3, 1fr), 30px);
 }
 
 .types-repair__request {

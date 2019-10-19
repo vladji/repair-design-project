@@ -1,0 +1,91 @@
+.team {
+  position: relative;
+  text-align: center;
+
+  .team__inner {
+    position: absolute;
+    top: -375px;
+    width: 100%;
+  }
+}
+
+.team__title {
+  @include section-title-icon($white_color, url("../assets/img/team-title-icon.png"));
+}
+
+.team__title-txt {
+  margin-top: 24px;
+  @include futura-font(1.25rem, $white_color, none);
+  line-height: 1.67rem;
+}
+
+.team__members {
+  @include img-3-col(272px 272px 272px, 105px);
+  margin-top: 6%;
+
+  .col__txt-block {
+    top: 78%;
+    width: 86%;
+    padding: 0;
+
+    h3 {
+      padding: 10% 0 0;
+      text-align: center;
+    }
+
+    .sub-title {
+      margin-top: 10px;
+      text-align: center;
+      @include futura-font(1.12rem, $grey_color, none);
+    }
+
+    .endnote {
+      width: 100%;
+      transform: translate(0, 50%);
+      font-size: .8rem;
+    }
+  }
+
+  .team-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: $bckg-btn;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .tean-icom_manager {
+    background-image: url("../assets/img/manager-icon.png");
+  }
+
+  .team-icon_designer {
+    background-image: url("../assets/img/designer-icon.png");
+  }
+
+  .team-icon_foreman {
+    background-image: url("../assets/img/foreman-icon.png");
+  }
+}
+
+.team__txt {
+  position: relative;
+  width: 560px;
+  margin: 9% auto 0;
+  @include futura-font(1.25rem, $dark_color, none);
+  line-height: 2.13rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 55px;
+    height: 2px;
+    transform: translate(-50%);
+    background-color: $gold_color;
+  }
+}

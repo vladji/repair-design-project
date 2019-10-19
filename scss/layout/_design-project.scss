@@ -17,5 +17,13 @@
 .design-project__gallery {
   position: absolute;
   top: 53%;
-  @include img-3-col();
+  @include img-3-col(repeat(3, 1fr), 30px);
+
+  .endnote {
+    text-align: left;
+
+    p {
+      padding: 8% 0 8% 12%;
+    }
+  }
 }

@@ -1,0 +1,63 @@
+@mixin img-3-col($columns, $col_gap) {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: $columns;
+  grid-column-gap: $col_gap;
+  justify-content: center;
+
+  .col {
+    position: relative;
+  }
+
+  .col__txt-block {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 83%;
+    transform: translate(-50%);
+    text-align: left;
+    background-color: $white_color;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+    h3 {
+      padding: 8% 0 5% 8%;
+      @include yeseva-font(1.1rem, $dark_color, none);
+      line-height: 1.44rem;
+    }
+
+    ul {
+      padding-left: 8%;
+      @include futura-font(0.9rem, $grey_color, none);
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      span {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-right: 4px;
+        border-radius: 50%;
+        background-color: $grey_color;
+      }
+    }
+  }
+
+  .endnote {
+    width: 73%;
+    text-align: center;
+    transform: translate(0, 50%);
+    border-radius: 2px;
+    font-size: 1.13rem;
+    background-color: $bckg-btn;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+
+    p {
+      padding: 8% 0;
+      @include yeseva-font(inherit, $white_color, uppercase);
+    }
+  }
+}

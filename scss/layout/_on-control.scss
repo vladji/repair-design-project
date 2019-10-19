@@ -8,7 +8,6 @@
   width: 100%;
   text-align: center;
   color: $dark_color;
-  background-color: transparent;
 
   .form {
     @include form(flex, $grey_color, rgba(54, 54, 54, 0.3), 18%);
@@ -25,21 +24,10 @@
 
 .on-control__video {
   position: relative;
-  width: 56%;
+  width: 817px;
   height: 435px;
   margin: 2% auto 0;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -62px;
-    left: 50%;
-    width: 55px;
-    height: 2px;
-    transform: translate(-50%);
-    background-color: $gold_color;
-  }
 
   iframe {
     width: 100%;
@@ -67,8 +55,20 @@
 }
 
 .on-control__txt {
+  position: relative;
   width: 680px;
   margin: 8% auto;
   @include futura-font(1.25rem, inherit, none);
   line-height: 2.13rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    width: 55px;
+    height: 2px;
+    transform: translate(-50%);
+    background-color: $gold_color;
+  }
 }
