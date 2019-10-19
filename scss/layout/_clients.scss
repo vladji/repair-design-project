@@ -36,7 +36,16 @@
         width: 76px;
         height: 76px;
         border-radius: 50%;
-        background: url("../assets/img/client-1.png");
+      }
+
+      .clients__title-icon_1 {
+        background: url("../assets/img/client-1.png") center;
+      }
+      .clients__title-icon_2 {
+        background: url("../assets/img/client-2.png") center;
+      }
+      .clients__title-icon_3 {
+        background: url("../assets/img/client-3.png") center;
       }
 
       h3 {

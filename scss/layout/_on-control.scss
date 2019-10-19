@@ -10,7 +10,8 @@
   color: $dark_color;
 
   .form {
-    @include form(flex, $grey_color, rgba(54, 54, 54, 0.3), 18%);
+    display: block;
+    @include form(flex, $grey_color, rgba(54, 54, 54, 0.3));
 
     button {
       @include main-btn(200px, 50px, $font-futura, 0.9rem);

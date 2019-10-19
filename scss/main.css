@@ -683,7 +683,11 @@ main {
   color: #363636;
 }
 
-.on-control__inner .form .form__display {
+.on-control__inner .form {
+  display: block;
+}
+
+.on-control__inner .form .form__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,10 +696,19 @@ main {
           justify-content: center;
 }
 
+.on-control__inner .form .form__input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .on-control__inner .form .form__main-group {
-  width: 18%;
+  -ms-flex-preferred-size: 41%;
+      flex-basis: 41%;
   height: 45px;
-  margin-right: 3%;
   text-align: left;
   border-top: 0;
   border-left: 0;
@@ -739,7 +752,7 @@ main {
 }
 
 .on-control__inner .form .form__checkbox {
-  margin-top: 2%;
+  margin-top: 3%;
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1rem;
@@ -1163,17 +1176,24 @@ main {
   width: 40%;
 }
 
-.form .form__display {
+.form .form__block {
   display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.form .form__input-block {
+  display: block;
+  width: 40%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .form .form__main-group {
-  width: 100%;
+  -ms-flex-preferred-size: 41%;
+      flex-basis: 41%;
   height: 45px;
-  margin-right: 3%;
   text-align: left;
   border-top: 0;
   border-left: 0;
@@ -1217,7 +1237,7 @@ main {
 }
 
 .form .form__checkbox {
-  margin-top: 2%;
+  margin-top: 3%;
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1rem;
@@ -2044,7 +2064,18 @@ main {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  background: url("../assets/img/client-1.png");
+}
+
+.clients__gallery .clients__txt-block .clients__title-wrap .clients__title-icon_1 {
+  background: url("../assets/img/client-1.png") center;
+}
+
+.clients__gallery .clients__txt-block .clients__title-wrap .clients__title-icon_2 {
+  background: url("../assets/img/client-2.png") center;
+}
+
+.clients__gallery .clients__txt-block .clients__title-wrap .clients__title-icon_3 {
+  background: url("../assets/img/client-3.png") center;
 }
 
 .clients__gallery .clients__txt-block .clients__title-wrap h3 {

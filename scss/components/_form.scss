@@ -1,13 +1,18 @@
-@mixin form($display, $label_color, $underline, $width_main-group) {
-  .form__display {
+@mixin form($display, $label_color, $underline) {
+  .form__block {
     display: $display;
     justify-content: center;
   }
 
+  .form__input-block {
+    display: $display;
+    width: 40%;
+    justify-content: space-around;
+  }
+
   .form__main-group {
-    width: $width_main-group;
+    flex-basis: 41%;
     height: 45px;
-    margin-right: 3%;
     text-align: left;
     border-top: 0;
     border-left: 0;
@@ -33,7 +38,7 @@
   }
 
   .form__checkbox {
-    margin-top: 2%;
+    margin-top: 3%;
     @include futura-font(1rem, inherit, none);
 
     .form__checkbox-label {
