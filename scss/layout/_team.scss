@@ -6,6 +6,12 @@
     position: absolute;
     top: -375px;
     width: 100%;
+
+    @media screen and (max-width: 1310px) {
+      position: static;
+      padding-bottom: 7%;
+      background: $mob_back;
+    }
   }
 }
 
@@ -23,8 +29,13 @@
   @include img-3-col(272px 272px 272px, 105px);
   margin-top: 6%;
 
+  .col {
+    @media screen and (max-width: 1170px) {
+      margin: 4%;
+    }
+  }
+
   .col__txt-block {
-    top: 78%;
     width: 86%;
     padding: 0;
 
@@ -42,7 +53,7 @@
     .endnote {
       width: 100%;
       transform: translate(0, 50%);
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -74,9 +85,14 @@
 .team__txt {
   position: relative;
   width: 560px;
-  margin: 9% auto 0;
-  @include futura-font(1.25rem, $dark_color, none);
+  margin: 1% auto 0;
+  @include futura-font(1.25rem, inherit, none);
   line-height: 2.13rem;
+  color: $dark_color;
+
+  @media screen and (max-width: 1310px) {
+    color: $white_color;
+  }
 
   &::before {
     content: "";

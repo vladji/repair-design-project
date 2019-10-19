@@ -1,55 +1,80 @@
 .fantasy {
-  background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), url("../assets/img/fantasy-section-bkg.png");
+  background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%),
+    url("../assets/img/fantasy-section-bkg.png");
   background-size: cover;
 
   .section-wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 1250px) {
+      display: block;
+      padding-bottom: 5%;
+    }
   }
 }
 
 .fantasy__left-block {
   padding: 11% 0 10%;
 
+  @media screen and (max-width: 1250px) {
+    padding: 7% 0;
+  }
+
   h2 {
     margin-bottom: 15%;
     @include yeseva-font(1.69rem, $gold_color, uppercase);
+
+    @media screen and (max-width: 1250px) {
+      margin: 0;
+      text-align: center;
+    }
   }
 }
 
 .fantasy__gallery {
   display: flex;
 
+  @media screen and (max-width: 1250px) {
+    justify-content: center;
+  }
+
   .fantasy__gallery-block {
     position: relative;
     width: 355px;
 
-    &:first-child {margin-right: 45px;}
+    &:first-child {
+      margin-right: 45px;
+    }
 
-    .fantasy__gallery-img1 {
+    .fantasy__gallery-img {
       position: absolute;
+
+      @media screen and (max-width: 1250px) {
+        position: static;
+        margin-bottom: 10%;
+      }
+    }
+
+    .fantasy__gallery-img_1 {
       top: -5%;
       left: 0;
     }
 
-    .fantasy__gallery-img2 {
-      position: absolute;
+    .fantasy__gallery-img_2 {
       top: 64%;
       left: 0;
     }
 
-    .fantasy__gallery-img3 {
-      position: absolute;
+    .fantasy__gallery-img_3 {
       top: -13%;
       right: 0;
     }
 
-    .fantasy__gallery-img4 {
-      position: absolute;
+    .fantasy__gallery-img_4 {
       top: 23%;
       right: 0;
     }
   }
 }
-

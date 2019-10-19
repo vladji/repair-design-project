@@ -7,6 +7,11 @@
   background-position: 0 100%;
   background-blend-mode: overlay;
 
+  @media screen and (max-width: 1170px) {
+    padding: 8% 0 0;
+    background: $mob_back;
+  }
+
   .section-wrapper {
     position: relative;
   }
@@ -26,6 +31,7 @@
 
     @media screen and (max-width: 1170px) {
       width: 100%;
+      text-align: center;
     }
 
     h2 {
@@ -45,12 +51,12 @@
 
   .projects__slider {
     position: absolute;
+    width: 100%;
     left: 40%;
     padding-top: 5%;
-    overflow: hidden;
 
     @media screen and (max-width: 1170px) {
-      width: 100%;
+      position: static;
     }
 
     .projects__units {
@@ -90,6 +96,7 @@
 
     .projects__slider-img {
       display: flex;
+      overflow: hidden;
 
       li {
         margin-right: 25px;
@@ -104,11 +111,9 @@
       }
     }
 
-    .projects__slider-btn-next {
+    .projects__slider-btn {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
-      left: 11.7%;
       width: 55px;
       height: 55px;
       border-radius: 50%;
@@ -117,6 +122,24 @@
       background-repeat: no-repeat;
       background-position: center;
       cursor: pointer;
+    }
+
+    .projects__slider-btn_next {
+      left: 60%;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 1170px) {
+        left: 90%;
+      }
+    }
+
+    .projects__slider-btn_prev {
+      left: 3%;
+      transform: rotate(180deg) translateY(50%);
+
+      @media screen and (min-width: 1171px) {
+        display: none;
+      }
     }
   }
 }

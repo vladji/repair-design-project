@@ -3,6 +3,10 @@
   background-color: $back-dark;
   @extend %pagination-btn;
 
+  @media screen and (max-width: 1310px) {
+    display: none;
+  }
+
   .section-wrapper {
     display: flex;
     justify-content: space-between;

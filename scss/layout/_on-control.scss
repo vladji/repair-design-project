@@ -1,5 +1,10 @@
 .on-control {
   position: relative;
+
+  @media screen and (max-width: 1170px) {
+    padding: 6% 0 10%;
+    background: $mob_back;
+  }
 }
 
 .on-control__inner {
@@ -8,6 +13,11 @@
   width: 100%;
   text-align: center;
   color: $dark_color;
+
+  @media screen and (max-width: 1170px) {
+    position: static;
+    color: $white_color;
+  }
 
   .form {
     display: block;

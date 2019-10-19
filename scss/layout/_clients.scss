@@ -3,6 +3,10 @@
   background-image: url("../assets/img/clients-section-frame.png");
   background-position: bottom;
   background-repeat: repeat-x;
+
+  @media screen and (max-width: 1310px) {
+    padding: 7% 0 26%;
+  }
 }
 
 .clients__title {

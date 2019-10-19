@@ -1,6 +1,11 @@
 .types-repair {
   padding-top: 60%;
   text-align: center;
+
+  @media screen and (max-width: 1170px) {
+    padding-top: 6%;
+    background: #fff;
+  }
 }
 
 .types-repair__title {
@@ -13,13 +18,19 @@
 
 .types-repair__request {
   display: flex;
+  padding: 12% 0 20%;
   justify-content: space-between;
-  padding: 32% 0 25%;
+
+  @media screen and (max-width: 1310px) {
+    flex-flow: wrap;
+    justify-content: center;
+  }
 }
 
 .types-repair__bullets-wrapper {
   position: relative;
-  width: 60%;
+  width: 61%;
+  height: 640px;
   text-align: left;
   color: $dark_color;
 
@@ -68,6 +79,8 @@
     position: absolute;
     display: flex;
     align-items: center;
+    background: $white_color;
+    box-shadow: 0px 0px 2px 15px #fff;
   }
 
   .bullets-tips__one {
@@ -100,12 +113,15 @@
     border-radius: 50%;
     @include yeseva-font(1.12rem, $white_color, none);
     background-color: $gold_color;
-    box-shadow: 0px 0px 0px 15px #fff;
   }
 }
 
 .types-repair__from-wrapper {
   width: 40%;
+
+  @media screen and (max-width: 1310px) {
+    width: 70%;
+  }
 }
 
 .form {

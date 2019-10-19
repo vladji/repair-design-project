@@ -1,6 +1,10 @@
 .def-list {
   @include proxima-font(1.25rem, $white_color, none);
 
+  @media screen and (max-width: 1250px) {
+    display: none;
+  }
+
   .def-list__item {
     margin-bottom: 27px;
     cursor: pointer;

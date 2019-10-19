@@ -1,23 +1,42 @@
 .design-project {
   position: relative;
   padding: 12% 0 20%;
+
+  @media screen and (max-width: 1310px) {
+    padding: 7% 0 0;
+    background: $mob_back;
+  }
 }
 
 .design-project__title {
-  @include section-title-icon($darkness_color, url("../assets/img/desgin-project-icon.png"));
+  @include section-title-icon(inherit, url("../assets/img/desgin-project-icon.png"));
+  color: $darkness_color;
+
+  @media screen and (max-width: 1310px) {
+    color: $white_color;
+  }
 }
 
 .design-project__txt {
   padding: 25px 0 45px;
   text-align: center;
-  @include futura-font(1.25rem, $dark_color, none);
+  @include futura-font(1.25rem, inherit, none);
   line-height: 1.69rem;
+  color: $dark_color;
+
+  @media screen and (max-width: 1310px) {
+    color: $white_color;
+  }
 }
 
 .design-project__gallery {
   position: absolute;
   top: 53%;
   @include img-3-col(repeat(3, 1fr), 30px);
+
+  @media screen and (max-width: 1310px) {
+    position: static;
+  }
 
   .endnote {
     text-align: left;

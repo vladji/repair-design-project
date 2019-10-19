@@ -5,13 +5,19 @@
   grid-column-gap: $col_gap;
   justify-content: center;
 
+  @media screen and (max-width: 1310px) {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+
   .col {
     position: relative;
   }
 
   .col__txt-block {
-    position: absolute;
-    top: 70%;
+    position: relative;
+    top: -18%;
     left: 50%;
     width: 83%;
     transform: translate(-50%);
