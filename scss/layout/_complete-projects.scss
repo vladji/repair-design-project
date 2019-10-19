@@ -57,6 +57,16 @@
 
     @media screen and (max-width: 1170px) {
       position: static;
+
+      .slider-btn_next {
+        left: 90%;
+      }
+    }
+
+    .slider-btn_prev {
+      @media screen and (min-width: 1171px) {
+        display: none;
+      }
     }
 
     .projects__units {
@@ -108,37 +118,6 @@
             width: 88vw;
           }
         }
-      }
-    }
-
-    .projects__slider-btn {
-      position: absolute;
-      top: 50%;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      background-color: $gold_color;
-      background-image: url("../assets/img/arrow-next_white.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      cursor: pointer;
-    }
-
-    .projects__slider-btn_next {
-      left: 60%;
-      transform: translateY(-50%);
-
-      @media screen and (max-width: 1170px) {
-        left: 90%;
-      }
-    }
-
-    .projects__slider-btn_prev {
-      left: 3%;
-      transform: rotate(180deg) translateY(50%);
-
-      @media screen and (min-width: 1171px) {
-        display: none;
       }
     }
   }

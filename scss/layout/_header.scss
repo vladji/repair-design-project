@@ -36,8 +36,16 @@
   .header__menu-wrap {
     padding: 2% 7% 2% 0;
 
+    @media screen and (max-width: 1070px) {
+      padding: 3% 7% 3% 0;
+    }
+
     .menu-btn {
       @include main-btn(161px, 37px, $font-futura, 13px);
+
+      @media screen and (max-width: 1070px) {
+        display: none;
+      }
     }
   }
 
@@ -61,6 +69,10 @@
       margin: 25px 0 45px;
       @include futura-font(1.37rem, $white_color, none);
       line-height: 1.9rem;
+
+      @media screen and (max-width: 1070px) {
+        width: 85%;
+      }
     }
   }
 

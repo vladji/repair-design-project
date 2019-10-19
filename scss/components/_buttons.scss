@@ -21,6 +21,53 @@
   }
 }
 
+// * Scrol btn
+.scroll-btn {
+  display: flex;
+  position: absolute;
+  bottom: -48px;
+  left: -82px;
+  padding: 3% 4%;
+  justify-content: center;
+  align-items: center;
+  @include yeseva-font(0.9rem, $white_color, uppercase);
+  background-color: $back-dark;
+  cursor: default;
+
+  .scroll-btn__inner-icon {
+    width: 29px;
+    height: 29px;
+    margin-left: 15px;
+    background: url("../assets/img/scroll-btn-inner-icon.svg") no-repeat;
+    cursor: pointer;
+  }
+}
+
+// * Slider btns
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: $gold_color;
+  background-image: url("../assets/img/arrow-next_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.slider-btn_next {
+  left: 60%;
+  transform: translateY(-50%);
+}
+
+.slider-btn_prev {
+  left: 3%;
+  transform: rotate(180deg) translateY(50%);
+}
+
+// * Video btn
 .btn-play {
   display: flex;
   position: absolute;
@@ -40,26 +87,5 @@
     transform: translate(33%);
     border: 20px solid transparent;
     border-left: 25px solid $white_color;
-  }
-}
-
-.scroll-btn {
-  display: flex;
-  position: absolute;
-  bottom: -48px;
-  left: -82px;
-  padding: 3% 4%;
-  justify-content: center;
-  align-items: center;
-  @include yeseva-font(.9rem, $white_color, uppercase);
-  background-color: $back-dark;
-  cursor: default;
-
-  .scroll-btn__inner-icon {
-    width: 29px;
-    height: 29px;
-    margin-left: 15px;
-    background: url('../assets/img/scroll-btn-inner-icon.svg') no-repeat;
-    cursor: pointer;
   }
 }

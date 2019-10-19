@@ -82,8 +82,8 @@
                 <li><img src="../repair-design-project/assets/img/slider-img-1.png" alt="image-3"></li>
                 <li><img src="../repair-design-project/assets/img/slider-img-1.png" alt="image-3"></li>
               </ul>
-              <div class="projects__slider-btn projects__slider-btn_next"></div>
-              <div class="projects__slider-btn projects__slider-btn_prev"></div>
+              <div class="slider-btn slider-btn_next"></div>
+              <div class="slider-btn slider-btn_prev"></div>
             </div>
           </div>
           <div class="projects__addition-info">
@@ -116,7 +116,7 @@
         </div>
       </section>
       <section class="on-control">
-        <div class="on-control__inner">
+        <div class="on-control__inner section-wrapper">
           <div class="on-control__title">
             <h2>online control</h2>
             <div class="section__title-icon"></div>
@@ -298,15 +298,23 @@
               <li class="def-list__item"><span>Eclecticism</span></li>
             </ul>
           </div>
-          <div class="fantasy__gallery">
-            <div class="fantasy__gallery-block">
-              <img class="fantasy__gallery-img fantasy__gallery-img_1" src="./assets/img/style-1.png" alt="Empire"><img
-                class="fantasy__gallery-img fantasy__gallery-img_2" src="./assets/img/style-2.png" alt="Classical">
-            </div>
-            <div class="fantasy__gallery-block">
-              <img class="fantasy__gallery-img fantasy__gallery-img_3" src="./assets/img/style-3.png" alt="Loft"><img
-                class="fantasy__gallery-img fantasy__gallery-img_4" src="./assets/img/style-4.png" alt="Minimalism">
-            </div>
+          <div class="fantasy__gallery-wrapper">
+            <ul class="fantasy__gallery">
+              <li class="fantasy__gallery-img fantasy__gallery-img_1">
+                <img src="./assets/img/style-1.png" alt="Empire">
+              </li>
+              <li class="fantasy__gallery-img fantasy__gallery-img_2">
+                <img src="./assets/img/style-2.png" alt="Classical">
+              </li>
+              <li class="fantasy__gallery-img fantasy__gallery-img_3">
+                <img src="./assets/img/style-3.png" alt="Loft">
+              </li>
+              <li class="fantasy__gallery-img fantasy__gallery-img_4">
+                <img src="./assets/img/style-4.png" alt="Minimalism">
+              </li>
+            </ul>
+            <div class="slider-btn slider-btn_next"></div>
+            <div class="slider-btn slider-btn_prev"></div>
           </div>
         </div>
       </section>
@@ -551,46 +559,49 @@
       </section>
     </main>
     <footer class="footer">
-      <form id="contacts" class="form_footer">
-        <p>have any questions?</p>
-        <div class="form__display">
-          <div class="form__block">
+      <div class="section-wrapper">
+        <form id="contacts" class="form_footer">
+          <p>have any questions?</p>
+          <div class="form__display">
+            <div class="form__block">
+              <fieldset class="form__main-group">
+                <label for="name__footer">Name</label>
+                <input type="text" id="name__footer" placeholder="What is your name:">
+              </fieldset>
+              <fieldset class="form__main-group">
+                <label for="phone__footer">Phone</label>
+                <input type="number" id="phone__footer" placeholder="Your phone number:">
+              </fieldset>
+            </div>
             <fieldset class="form__main-group">
-              <label for="name__footer">Name</label>
-              <input type="text" id="name__footer" placeholder="What is your name:">
-            </fieldset>
-            <fieldset class="form__main-group">
-              <label for="phone__footer">Phone</label>
-              <input type="number" id="phone__footer" placeholder="Your phone number:">
+              <label for="text__footer">Question</label>
+              <input type="text" id="text__footer" placeholder="I want to know:">
             </fieldset>
           </div>
-          <fieldset class="form__main-group">
-            <label for="text__footer">Question</label>
-            <input type="text" id="text__footer" placeholder="I want to know:">
+          <fieldset class="form__checkbox">
+            <label class="form__checkbox-label" for="agree__footer">
+              <input type="checkbox" id="agree__footer" checked required>
+              <span class="form__checkmark"></span>
+              I agree to the processing of personal data
+            </label>
           </fieldset>
-        </div>
-        <fieldset class="form__checkbox">
-          <label class="form__checkbox-label" for="agree__footer">
-            <input type="checkbox" id="agree__footer" checked required>
-            <span class="form__checkmark"></span>
-            I agree to the processing of personal data
-          </label>
-        </fieldset>
-        <div class="vertical-form-btn-wrap">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      <div class="adress-wrapper">
-        <div class="adress-inner">
-          <p class="adress-org">
-            Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel <a href="tel:+79287683229">+7 (928) 768 32 29</a>
-          </p>
-          <div class="contacts-icon-wrapper">
-            <a class="mail-icon" href="mailto:dsadow@hdsjsjs.com"></a>
-            <a class="insta-icon" href="https://www.instagram.com" target="_blank"></a>
+          <div class="vertical-form-btn-wrap">
+            <button type="submit">Submit</button>
           </div>
+        </form>
+        <div class="adress-wrapper">
+          <div class="adress-inner">
+            <p class="adress-org">
+              Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel <a href="tel:+79287683229">+7 (928) 768 32
+                29</a>
+            </p>
+            <div class="contacts-icon-wrapper">
+              <a class="mail-icon" href="mailto:dsadow@hdsjsjs.com"></a>
+              <a class="insta-icon" href="https://www.instagram.com" target="_blank"></a>
+            </div>
+          </div>
+          <img class="adress-map" src="./assets/img/map-footer.png" alt="our adress">
         </div>
-        <img class="adress-map" src="./assets/img/map-footer.png" alt="our adress">
       </div>
       <div class="footer-menu">
         <div class="section-wrapper">

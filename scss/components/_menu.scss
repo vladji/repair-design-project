@@ -10,6 +10,10 @@
 
   .menu-wrap {
     width: 40%;
+
+    @media screen and (max-width: 1070px) {
+      display: none;
+    }
   }
 
   .menu-item {
@@ -23,6 +27,11 @@
   }
 
   .contact-phone {
-    @include futura-font(14px, $gold_color, none);
+    @include futura-font(14px, inherit, none);
+    color: $gold_color;
+
+    @media screen and (max-width: 1070px) {
+      color: $white_color;
+    }
   }
 }

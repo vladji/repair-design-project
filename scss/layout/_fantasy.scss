@@ -1,80 +1,106 @@
 .fantasy {
+  position: relative;
+  padding: 9% 0 8%;
   background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%),
     url("../assets/img/fantasy-section-bkg.png");
   background-size: cover;
 
+  @media screen and (max-width: 1310px) {
+    padding: 5% 0;
+  }
+
   .section-wrapper {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
 
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 960px) {
       display: block;
-      padding-bottom: 5%;
     }
   }
 }
 
 .fantasy__left-block {
-  padding: 11% 0 10%;
-
-  @media screen and (max-width: 1250px) {
-    padding: 7% 0;
+  @media screen and (max-width: 1310px) {
+    padding: 0;
   }
 
   h2 {
     margin-bottom: 15%;
     @include yeseva-font(1.69rem, $gold_color, uppercase);
 
-    @media screen and (max-width: 1250px) {
-      margin: 0;
+    @media screen and (max-width: 960px) {
+      margin-bottom: 1%;
       text-align: center;
     }
   }
 }
 
-.fantasy__gallery {
-  display: flex;
-
-  @media screen and (max-width: 1250px) {
-    justify-content: center;
+.fantasy__gallery-wrapper {
+  @media screen and (min-width: 1311px) {
+    .slider-btn_next,
+    .slider-btn_prev {
+      display: none;
+    }
   }
 
-  .fantasy__gallery-block {
+  @media screen and (max-width: 1310px) {
     position: relative;
-    width: 355px;
+    display: flex;
+    width: 65%;
+    justify-content: center;
 
-    &:first-child {
-      margin-right: 45px;
+    .slider-btn_next {
+      left: 90%;
     }
 
-    .fantasy__gallery-img {
-      position: absolute;
-
-      @media screen and (max-width: 1250px) {
-        position: static;
-        margin-bottom: 10%;
-      }
-    }
-
-    .fantasy__gallery-img_1 {
-      top: -5%;
+    .slider-btn_prev {
       left: 0;
     }
+  }
 
-    .fantasy__gallery-img_2 {
-      top: 64%;
-      left: 0;
-    }
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
+}
 
-    .fantasy__gallery-img_3 {
-      top: -13%;
-      right: 0;
-    }
+.fantasy__gallery {
+  position: relative;
+  width: 735px;
+  height: 100%;
 
-    .fantasy__gallery-img_4 {
-      top: 23%;
-      right: 0;
+  @media screen and (max-width: 1310px) {
+    display: flex;
+    width: 360px;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fantasy__gallery-img {
+    position: absolute;
+
+    @media screen and (max-width: 1310px) {
+      position: static;
+      padding: 0 10px;
     }
+  }
+
+  .fantasy__gallery-img_1 {
+    top: -28%;
+    left: 0;
+  }
+
+  .fantasy__gallery-img_2 {
+    top: 68%;
+    left: 0;
+  }
+
+  .fantasy__gallery-img_3 {
+    top: -38%;
+    right: 0;
+  }
+
+  .fantasy__gallery-img_4 {
+    top: 12%;
+    right: 0;
   }
 }

@@ -4,6 +4,10 @@
   background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%),
     url("../assets/img/footer-bckg.png"), #181818;
   background-size: cover;
+
+  @media screen and (max-width: 1170px) {
+    padding-top: 5%;
+  }
 }
 
 .form_footer {
@@ -13,10 +17,17 @@
   transform: translateX(-50%);
   box-sizing: border-box;
   width: 61%;
+  margin: auto;
   padding: 3% 13%;
   @include form(flex, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.15));
   color: $white_color;
   background-color: $back-dark;
+
+  @media screen and (max-width: 1170px) {
+    position: static;
+    transform: none;
+    width: 70%;
+  }
 
   p {
     margin-bottom: 45px;
@@ -46,6 +57,10 @@
 .adress-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1170px) {
+    margin-top: 5%;
+  }
 }
 
 .adress-org {
@@ -88,10 +103,18 @@
   display: block;
   margin: 0 auto;
   padding: 3% 0 5%;
+
+  @media screen and (max-width: 1070px) {
+    width: 100%;
+  }
 }
 
 .footer-menu {
   background-color: $darkness_color;
+
+  @media screen and (max-width: 1070px) {
+    display: none;
+  }
 
   .menu {
     height: 133px;

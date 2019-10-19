@@ -1,7 +1,7 @@
 .def-list {
   @include proxima-font(1.25rem, $white_color, none);
 
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 
