@@ -46,6 +46,11 @@
       @media screen and (max-width: 1170px) {
         padding: 4% 0 0;
       }
+
+      @media screen and (max-width: 450px) {
+        font-size: 0.9rem;
+        line-height: 1.58;
+      }
     }
   }
 
@@ -60,6 +65,12 @@
 
       .slider-btn_next {
         left: 90%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .slider-btn_next {
+        left: 85%;
       }
     }
 
@@ -78,6 +89,10 @@
       @media screen and (max-width: 1170px) {
         position: static;
         margin-bottom: 5%;
+      }
+
+      @media screen and (max-width: 580px) {
+        display: none;
       }
 
       li {

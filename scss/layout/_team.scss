@@ -2,6 +2,10 @@
   position: relative;
   text-align: center;
 
+  @media screen and (max-width: 1310px) {
+    background: $mob_back;
+  }
+
   .team__inner {
     position: absolute;
     top: -375px;
@@ -10,7 +14,16 @@
     @media screen and (max-width: 1310px) {
       position: static;
       padding-bottom: 7%;
-      background: $mob_back;
+    }
+
+    @media screen and (max-width: 450px) {
+      padding: 0;
+    }
+  }
+
+  .team__inner.section-wrapper {
+    @media screen and (max-width: 768px) {
+      width: 90%;
     }
   }
 }
@@ -28,6 +41,15 @@
 .team__members {
   @include img-3-col(272px 272px 272px, 105px);
   margin-top: 6%;
+
+  @media screen and (max-width: 650px) {
+    margin-top: 10%;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-top: 16%;
+    justify-content: flex-end;
+  }
 
   .col {
     @media screen and (max-width: 1170px) {
@@ -92,6 +114,14 @@
 
   @media screen and (max-width: 1310px) {
     color: $white_color;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 450px) {
+    display: none;
   }
 
   &::before {

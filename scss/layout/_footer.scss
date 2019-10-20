@@ -8,6 +8,10 @@
   @media screen and (max-width: 1170px) {
     padding-top: 5%;
   }
+
+  @media screen and (max-width: 650px) {
+    background: $mob_back;
+  }
 }
 
 .form_footer {
@@ -27,6 +31,12 @@
     position: static;
     transform: none;
     width: 70%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    padding: 0;
+    background: 0;
   }
 
   p {
@@ -51,6 +61,11 @@
   button {
     margin-top: 40px;
     @include main-btn(200px, 50px, $font-futura, 0.9rem);
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -70,6 +85,10 @@
   @include yeseva-font(1.25rem, $gold_color, uppercase);
   line-height: 1.75rem;
 
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+
   a {
     color: $gold_color;
   }
@@ -77,9 +96,12 @@
 
 .contacts-icon-wrapper {
   display: flex;
-  width: 72px;
   margin: 26px auto 0;
-  justify-content: space-between;
+  justify-content: center;
+
+  a:first-child {
+    margin-right: 2%;
+  }
 
   a {
     width: 28px;
@@ -88,6 +110,11 @@
     background-color: $bckg-btn;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 650px) {
+      width: 39px;
+      height: 39px;
+    }
   }
 }
 
@@ -102,10 +129,21 @@
 .adress-map {
   display: block;
   margin: 0 auto;
-  padding: 3% 0 5%;
+  padding: 5% 0 7%;
 
   @media screen and (max-width: 1070px) {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .adress-inner {
+    order: 2;
+    margin-bottom: 7%;
+  }
+
+  .adress-map {
+    order: 1;
   }
 }
 

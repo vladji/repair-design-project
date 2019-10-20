@@ -1,13 +1,40 @@
 @mixin form($display, $label_color, $underline) {
+  @media screen and (min-width: 769px) {
+    .btn-mob {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .btn-mob {
+      transform: translateY(25px);
+      width: 100%;
+    }
+  }
+
   .form__block {
     display: $display;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      position: relative;
+      display: block;
+
+      .btn-desktop {
+        display: none;
+      }
+    }
   }
 
   .form__input-block {
     display: $display;
     width: 40%;
     justify-content: space-around;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+    }
   }
 
   .form__main-group {
@@ -18,6 +45,12 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid $underline;
+
+    @media screen and (max-width: 768px) {
+      &:first-child {
+        margin: 5% 0 11%;
+      }
+    }
 
     label {
       display: block;
@@ -34,6 +67,10 @@
       &::placeholder {
         color: inherit;
       }
+
+      @media screen and (max-width: 450px) {
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -41,11 +78,19 @@
     margin-top: 3%;
     @include futura-font(1rem, inherit, none);
 
+    @media screen and (max-width: 768px) {
+      margin: 3% 0 9%;
+    }
+
     .form__checkbox-label {
       display: flex;
       position: relative;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+      }
     }
 
     input {
@@ -55,6 +100,10 @@
 
       &:checked + .form__checkmark::after {
         display: block;
+      }
+
+      @media screen and (max-width: 768px) {
+        position: absolute;
       }
     }
 

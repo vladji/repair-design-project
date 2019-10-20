@@ -41,6 +41,10 @@
     background: url("../assets/img/scroll-btn-inner-icon.svg") no-repeat;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 // * Slider btns
@@ -55,6 +59,11 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  @media screen and (max-width: 450px) {
+    width: 37px;
+    height: 37px;
+  }
 }
 
 .slider-btn_next {
@@ -87,5 +96,15 @@
     transform: translate(33%);
     border: 20px solid transparent;
     border-left: 25px solid $white_color;
+
+    @media screen and (max-width: 450px) {
+      border-width: 10px;
+      border-left-width: 13px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 37px;
+    height: 37px;
   }
 }

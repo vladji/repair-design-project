@@ -1,5 +1,5 @@
 // * BREAKPOINTs
-// * 1310, 1170, 1070, 960, 768
+// * 1310, 1170, 1070, 960, 768, 650, 580, 450
 
 body {
   font-family: Arial, sans-serif;
@@ -26,4 +26,8 @@ footer {
 .section-wrapper {
   width: 86%;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 }

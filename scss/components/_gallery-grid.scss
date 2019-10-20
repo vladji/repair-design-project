@@ -13,6 +13,10 @@
 
   .col {
     position: relative;
+
+    img {
+      width: 100%;
+    }
   }
 
   .col__txt-block {
@@ -24,6 +28,10 @@
     text-align: left;
     background-color: $white_color;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+    @media screen and (max-width: 450px) {
+      left: 41%;
+    }
 
     h3 {
       padding: 8% 0 5% 8%;

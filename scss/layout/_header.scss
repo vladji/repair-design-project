@@ -17,6 +17,10 @@
       background-color: $gold_color;
     }
   }
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 .header {
@@ -33,11 +37,19 @@
   display: block;
   width: 94.3%;
 
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+
   .header__menu-wrap {
     padding: 2% 7% 2% 0;
 
     @media screen and (max-width: 1070px) {
       padding: 3% 7% 3% 0;
+    }
+
+    @media screen and (max-width: 650px) {
+      padding: 4% 7%;
     }
 
     .menu-btn {
@@ -53,25 +65,45 @@
     position: relative;
     padding: 15% 0 15% 5%;
     background: url("../assets/img/header-layer.png") no-repeat;
+
+    @media screen and (max-width: 650px) {
+      padding: 15% 6% 11%;
+    }
   }
 
   .header__text-wrap {
     .header__title {
-      @include yeseva-font(2.5rem, $white_color, uppercase);
+      @include yeseva-font(inherit, $white_color, uppercase);
+      font-size: 2.5rem;
       line-height: 3.2rem;
       span {
         color: $gold_color;
+      }
+
+      @media screen and (max-width: 650px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 1.44rem;
+        line-height: 1.32;
       }
     }
 
     .header__sub-title {
       width: 35%;
       margin: 25px 0 45px;
-      @include futura-font(1.37rem, $white_color, none);
+      @include futura-font(inherit, $white_color, none);
+      font-size: 1.37rem;
       line-height: 1.9rem;
 
       @media screen and (max-width: 1070px) {
         width: 85%;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 1.13rem;
+        line-height: 1.32;
       }
     }
   }
@@ -80,12 +112,21 @@
     .header__btn-left {
       @include main-btn(207px, 51px, $font-futura, 0.8rem);
       margin-right: 20px;
+
+      @media screen and (max-width: 650px) {
+        width: 100%;
+        margin: 0 0 5%;
+      }
     }
 
     .header__btn-right {
       @include main-btn(207px, 51px, $font-futura, 0.8rem);
       border: 1px solid #fff;
       background-color: transparent;
+
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
     }
   }
 }

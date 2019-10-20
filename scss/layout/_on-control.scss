@@ -5,6 +5,10 @@
     padding: 6% 0 10%;
     background: $mob_back;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 6% 0 0;
+  }
 }
 
 .on-control__inner {
@@ -20,12 +24,18 @@
   }
 
   .form {
-    display: block;
+    position: relative;
     @include form(flex, $grey_color, rgba(54, 54, 54, 0.3));
 
     button {
       @include main-btn(200px, 50px, $font-futura, 0.9rem);
     }
+  }
+}
+
+.on-control__inner.section-wrapper {
+  @media screen and (max-width: 768px) {
+    width: 90%;
   }
 }
 
@@ -43,6 +53,22 @@
   @media screen and (max-width: 960px) {
     width: 90%;
     margin: 5% auto 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 320px;
+  }
+
+  @media screen and (max-width: 580px) {
+    height: 290px;
+  }
+
+  @media screen and (max-width: 450px) {
+    height: 210px;
   }
 
   iframe {
@@ -86,5 +112,34 @@
     height: 2px;
     transform: translate(-50%);
     background-color: $gold_color;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 9% auto;
+
+    &::before {
+      top: -20%;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    margin: 11% auto;
+
+    &::before {
+      top: -17%;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+
+    &::before {
+      top: -12%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: .9rem;
+    line-height: 1.58;
   }
 }
