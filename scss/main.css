@@ -1459,7 +1459,9 @@ footer {
 
 @media screen and (max-width: 450px) {
   .types-repair__gallery .col__txt-block {
-    left: 41%;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -2254,7 +2256,9 @@ footer {
 
 @media screen and (max-width: 450px) {
   .design-project__gallery .col__txt-block {
-    left: 41%;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -2625,7 +2629,9 @@ footer {
 
 @media screen and (max-width: 450px) {
   .team__members .col__txt-block {
-    left: 41%;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
