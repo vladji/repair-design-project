@@ -12,6 +12,10 @@
       width: 50%;
       height: 1px;
       background-color: $gold_color;
+
+      @media screen and (max-width: 1170px) {
+        display: none;
+      }
     }
   }
 }

@@ -377,6 +377,12 @@ footer {
   background-color: #e3b873;
 }
 
+@media screen and (max-width: 1170px) {
+  .projects__left-block .projects__txt h2 span::after, .steps .steps__left-block h2 span::after {
+    display: none;
+  }
+}
+
 .def-list {
   font-family: "Proxima Nova", sans-serif;
   text-transform: none;
