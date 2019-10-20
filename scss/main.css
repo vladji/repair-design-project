@@ -319,7 +319,7 @@ footer {
 }
 
 .projects__addition-info .projects__pagination .control-left-arrow:hover, .steps .control-left-arrow:hover {
-  width: 84px;
+  width: 84px !important;
 }
 
 .projects__addition-info .projects__pagination .control-dot, .steps .control-dot, .steps .steps__left-block .steps__pagination .control-dot {
@@ -352,7 +352,7 @@ footer {
 }
 
 .projects__addition-info .projects__pagination .control-right-arrow:hover, .steps .control-right-arrow:hover {
-  width: 84px;
+  width: 84px !important;
 }
 
 .projects__left-block .projects__txt h2, .steps .steps__left-block h2 {

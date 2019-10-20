@@ -17,7 +17,7 @@
     transition: width .5s ease-out;
 
     &:hover {
-      width: 84px;
+      width: 84px !important;
     }
   }
 
@@ -49,7 +49,7 @@
     transition: width .5s ease-out;
 
     &:hover {
-      width: 84px;
+      width: 84px !important;
     }
   }
 }
