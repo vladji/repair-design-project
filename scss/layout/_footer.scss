@@ -110,6 +110,12 @@
     background-color: $bckg-btn;
     background-position: center;
     background-repeat: no-repeat;
+    transform: none;
+    transition: transform 1s ease-out;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.5);
+    }
 
     @media screen and (max-width: 650px) {
       width: 39px;

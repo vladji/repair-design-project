@@ -23,6 +23,11 @@
     a {
       @include futura-font(14px, $white_color, uppercase);
       text-decoration: none;
+      transition: color .2s ease-out;
+
+      &:hover {
+        color: $gold_color;
+      }
     }
   }
 

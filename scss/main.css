@@ -141,6 +141,12 @@ footer {
   font-size: 14px;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+
+.menu .menu-item a:hover {
+  color: #e3b873;
 }
 
 .menu .contact-phone {
@@ -177,6 +183,8 @@ footer {
   color: #fff;
   background-color: #131313;
   cursor: default;
+  -webkit-transition: bottom .5s ease-in;
+  transition: bottom .5s ease-in;
 }
 
 .scroll-btn .scroll-btn__inner-icon {
@@ -193,6 +201,10 @@ footer {
   }
 }
 
+.scroll-btn:hover {
+  bottom: -72px;
+}
+
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -204,6 +216,13 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  -webkit-transition: width .2s ease-in, height .2s ease-in;
+  transition: width .2s ease-in, height .2s ease-in;
+}
+
+.slider-btn:hover {
+  width: 65px;
+  height: 65px;
 }
 
 @media screen and (max-width: 450px) {
@@ -295,6 +314,12 @@ footer {
           transform: rotate(180deg);
   background-image: url("../assets/img/arrow-raw.png");
   cursor: pointer;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+.projects__addition-info .projects__pagination .control-left-arrow:hover, .steps .control-left-arrow:hover {
+  width: 84px;
 }
 
 .projects__addition-info .projects__pagination .control-dot, .steps .control-dot, .steps .steps__left-block .steps__pagination .control-dot {
@@ -322,6 +347,12 @@ footer {
   margin-left: 30px;
   background-image: url("../assets/img/arrow-raw.png");
   cursor: pointer;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+.projects__addition-info .projects__pagination .control-right-arrow:hover, .steps .control-right-arrow:hover {
+  width: 84px;
 }
 
 .projects__left-block .projects__txt h2, .steps .steps__left-block h2 {
@@ -467,6 +498,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .header__wrap .header__menu-wrap .menu-btn a {
@@ -483,6 +522,12 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.header__wrap .header__menu-wrap .menu-btn:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 
 @media screen and (max-width: 1070px) {
@@ -565,6 +610,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   margin-right: 20px;
 }
 
@@ -582,6 +635,12 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.header__wrap .header__btns-wrap .header__btn-left:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 
 @media screen and (max-width: 650px) {
@@ -603,6 +662,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   border: 1px solid #fff;
   background-color: transparent;
 }
@@ -621,6 +688,12 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.header__wrap .header__btns-wrap .header__btn-right:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 
 @media screen and (max-width: 650px) {
@@ -752,18 +825,16 @@ footer {
 
 .projects__left-block .projects__slider .projects__units li {
   cursor: pointer;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
 }
 
-.projects__left-block .projects__slider .projects__units li:not(:last-child) {
-  margin-right: 60px;
-}
-
-.projects__left-block .projects__slider .projects__units-1_active {
+.projects__left-block .projects__slider .projects__units li:hover {
   position: relative;
   color: #e3b873;
 }
 
-.projects__left-block .projects__slider .projects__units-1_active::after {
+.projects__left-block .projects__slider .projects__units li:hover::after {
   content: "";
   position: absolute;
   top: 150%;
@@ -771,6 +842,10 @@ footer {
   height: 1px;
   width: 100%;
   background-color: #e3b873;
+}
+
+.projects__left-block .projects__slider .projects__units li:not(:last-child) {
+  margin-right: 60px;
 }
 
 .projects__left-block .projects__slider .projects__slider-img {
@@ -1085,6 +1160,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .on-control__inner .form button a {
@@ -1101,6 +1184,16 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.on-control__inner .form button:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
+}
+
+.on-control__inner .form button:hover {
+  color: #363636;
 }
 
 @media screen and (max-width: 768px) {
@@ -1795,6 +1888,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .form.form_repair button a {
@@ -1811,6 +1912,12 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.form.form_repair button:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 
 .motive-txt {
@@ -3140,6 +3247,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .form_footer button a {
@@ -3156,6 +3271,12 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.form_footer button:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 
 @media screen and (max-width: 650px) {
@@ -3223,6 +3344,17 @@ footer {
   background-color: #e3b873;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.contacts-icon-wrapper a:hover {
+  -webkit-transform: rotate(360deg) scale(1.5);
+          transform: rotate(360deg) scale(1.5);
 }
 
 @media screen and (max-width: 650px) {
@@ -3296,6 +3428,14 @@ footer {
   -webkit-box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
           box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
   cursor: pointer;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, box-shadow;
+  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .footer-menu .menu-btn a {
@@ -3312,5 +3452,11 @@ footer {
           justify-content: center;
   text-decoration: none;
   color: #fff;
+}
+
+.footer-menu .menu-btn:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 15px 5px #e3b873;
+          box-shadow: 0 0 15px 5px #e3b873;
 }
 /*# sourceMappingURL=main.css.map */

@@ -97,25 +97,26 @@
 
       li {
         cursor: pointer;
+        transition: color 0.3s ease-out;
+
+        &:hover {
+          position: relative;
+          color: $gold_color;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 150%;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $gold_color;
+          }
+        }
       }
 
       li:not(:last-child) {
         margin-right: 60px;
-      }
-    }
-
-    .projects__units-1_active {
-      position: relative;
-      color: $gold_color;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 150%;
-        left: 0;
-        height: 1px;
-        width: 100%;
-        background-color: $gold_color;
       }
     }
 
