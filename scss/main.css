@@ -2198,6 +2198,13 @@ footer {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .design-project__txt {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+}
+
 .design-project__gallery {
   position: absolute;
   top: 53%;
@@ -2561,6 +2568,13 @@ footer {
   font-size: 1.25rem;
   color: #fff;
   line-height: 1.67rem;
+}
+
+@media screen and (max-width: 450px) {
+  .team__title-txt {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
 }
 
 .team__members {

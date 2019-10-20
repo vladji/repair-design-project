@@ -36,6 +36,11 @@
   margin-top: 24px;
   @include futura-font(1.25rem, $white_color, none);
   line-height: 1.67rem;
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
 }
 
 .team__members {

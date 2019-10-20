@@ -27,6 +27,11 @@
   @media screen and (max-width: 1310px) {
     color: $white_color;
   }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
 }
 
 .design-project__gallery {
