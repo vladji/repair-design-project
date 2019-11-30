@@ -183,8 +183,8 @@ footer {
   color: #fff;
   background-color: #131313;
   cursor: default;
-  -webkit-transition: bottom .5s ease-in;
-  transition: bottom .5s ease-in;
+  -webkit-transition: bottom 0.5s ease-in;
+  transition: bottom 0.5s ease-in;
 }
 
 .scroll-btn .scroll-btn__inner-icon {
@@ -216,8 +216,8 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  -webkit-transition: width .2s ease-in, height .2s ease-in;
-  transition: width .2s ease-in, height .2s ease-in;
+  -webkit-transition: width 0.2s ease-in, height 0.2s ease-in;
+  transition: width 0.2s ease-in, height 0.2s ease-in;
 }
 
 .slider-btn:hover {
@@ -314,12 +314,15 @@ footer {
           transform: rotate(180deg);
   background-image: url("../assets/img/arrow-raw.png");
   cursor: pointer;
-  -webkit-transition: width .5s ease-out;
-  transition: width .5s ease-out;
+  -webkit-transition: -webkit-transform .3s ease-out .2s;
+  transition: -webkit-transform .3s ease-out .2s;
+  transition: transform .3s ease-out .2s;
+  transition: transform .3s ease-out .2s, -webkit-transform .3s ease-out .2s;
 }
 
 .projects__addition-info .projects__pagination .control-left-arrow:hover, .steps .control-left-arrow:hover {
-  width: 84px !important;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .projects__addition-info .projects__pagination .control-dot, .steps .control-dot, .steps .steps__left-block .steps__pagination .control-dot {
@@ -345,14 +348,19 @@ footer {
   width: 42px;
   height: 14px;
   margin-left: 30px;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
   background-image: url("../assets/img/arrow-raw.png");
   cursor: pointer;
-  -webkit-transition: width .5s ease-out;
-  transition: width .5s ease-out;
+  -webkit-transition: -webkit-transform .3s ease-out .2s;
+  transition: -webkit-transform .3s ease-out .2s;
+  transition: transform .3s ease-out .2s;
+  transition: transform .3s ease-out .2s, -webkit-transform .3s ease-out .2s;
 }
 
 .projects__addition-info .projects__pagination .control-right-arrow:hover, .steps .control-right-arrow:hover {
-  width: 84px !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .projects__left-block .projects__txt h2, .steps .steps__left-block h2 {
@@ -1024,10 +1032,6 @@ footer {
       flex-basis: 41%;
   height: 45px;
   text-align: left;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
 
 @media screen and (max-width: 768px) {
@@ -1046,8 +1050,10 @@ footer {
 }
 
 .on-control__inner .form .form__main-group input {
-  padding-top: 1%;
+  position: relative;
+  padding: 2% 0 10px;
   border: 0;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1.1rem;
@@ -1720,10 +1726,6 @@ footer {
       flex-basis: 41%;
   height: 45px;
   text-align: left;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 @media screen and (max-width: 768px) {
@@ -1742,8 +1744,10 @@ footer {
 }
 
 .form .form__main-group input {
-  padding-top: 1%;
+  position: relative;
+  padding: 2% 0 10px;
   border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1.1rem;
@@ -3089,10 +3093,6 @@ footer {
       flex-basis: 41%;
   height: 45px;
   text-align: left;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 @media screen and (max-width: 768px) {
@@ -3111,8 +3111,10 @@ footer {
 }
 
 .form_footer .form__main-group input {
-  padding-top: 1%;
+  position: relative;
+  padding: 2% 0 10px;
   border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-family: "Futura", sans-serif;
   text-transform: none;
   font-size: 1.1rem;

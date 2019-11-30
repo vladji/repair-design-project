@@ -41,7 +41,7 @@
   @include yeseva-font(0.9rem, $white_color, uppercase);
   background-color: $back-dark;
   cursor: default;
-  transition: bottom .5s ease-in;
+  transition: bottom 0.5s ease-in;
 
   .scroll-btn__inner-icon {
     width: 29px;
@@ -72,7 +72,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  transition: width .2s ease-in, height .2s ease-in;
+  transition: width 0.2s ease-in, height 0.2s ease-in;
 
   &:hover {
     width: 65px;

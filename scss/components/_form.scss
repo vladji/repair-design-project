@@ -41,10 +41,6 @@
     flex-basis: 41%;
     height: 45px;
     text-align: left;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid $underline;
 
     @media screen and (max-width: 768px) {
       &:first-child {
@@ -59,8 +55,10 @@
     }
 
     input {
-      padding-top: 1%;
+      position: relative;
+      padding: 2% 0 10px;
       border: 0;
+      border-bottom: 1px solid $underline;
       @include futura-font(1.1rem, inherit, none);
       background-color: transparent;
 
