@@ -401,6 +401,18 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
 .def-list {
   font-family: "Proxima Nova", sans-serif;
   text-transform: none;
@@ -1030,6 +1042,12 @@ input[type="number"] {
       justify-content: space-around;
 }
 
+@media screen and (max-width: 1170px) {
+  .on-control__inner .form .form__input-block {
+    width: 47%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .on-control__inner .form .form__input-block {
     display: block;
@@ -1086,6 +1104,12 @@ input[type="number"] {
 
 .on-control__inner .form .form__main-group input::placeholder {
   color: inherit;
+}
+
+@media screen and (max-width: 1170px) {
+  .on-control__inner .form .form__main-group input {
+    border-bottom: 1px solid #959595;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1217,6 +1241,13 @@ input[type="number"] {
 
 .on-control__inner .form button:hover {
   color: #363636;
+}
+
+@media screen and (max-width: 1170px) {
+  .on-control__inner .form button:hover {
+    color: #fff;
+    background-color: #131313;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1375,7 +1406,7 @@ input[type="number"] {
 
 @media screen and (max-width: 450px) {
   .on-control__txt {
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.58;
   }
 }
@@ -1725,6 +1756,12 @@ input[type="number"] {
       justify-content: space-around;
 }
 
+@media screen and (max-width: 1170px) {
+  .form .form__input-block {
+    width: 47%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .form .form__input-block {
     display: block;
@@ -1781,6 +1818,12 @@ input[type="number"] {
 
 .form .form__main-group input::placeholder {
   color: inherit;
+}
+
+@media screen and (max-width: 1170px) {
+  .form .form__main-group input {
+    border-bottom: 1px solid #959595;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -3093,6 +3136,12 @@ input[type="number"] {
       justify-content: space-around;
 }
 
+@media screen and (max-width: 1170px) {
+  .form_footer .form__input-block {
+    width: 47%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .form_footer .form__input-block {
     display: block;
@@ -3149,6 +3198,12 @@ input[type="number"] {
 
 .form_footer .form__main-group input::placeholder {
   color: inherit;
+}
+
+@media screen and (max-width: 1170px) {
+  .form_footer .form__main-group input {
+    border-bottom: 1px solid #959595;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -3234,12 +3289,22 @@ input[type="number"] {
           transform: rotate(45deg);
 }
 
+.form_footer .form__main-group:first-child {
+  margin-right: 5%;
+}
+
 @media screen and (max-width: 1170px) {
   .form_footer {
     position: static;
     -webkit-transform: none;
             transform: none;
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .form_footer {
+    width: 85%;
   }
 }
 

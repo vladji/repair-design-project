@@ -27,10 +27,18 @@
   color: $white_color;
   background-color: $back-dark;
 
+  .form__main-group:first-child {
+    margin-right: 5%;
+  }
+
   @media screen and (max-width: 1170px) {
     position: static;
     transform: none;
     width: 70%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    width: 85%;
   }
 
   @media screen and (max-width: 650px) {

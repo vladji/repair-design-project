@@ -33,6 +33,13 @@
       &:hover {
         color: $dark_color;
       }
+
+      @media screen and (max-width: 1170px) {
+        &:hover {
+          color: $white_color;
+          background-color: $back-dark;
+        }
+      }
     }
   }
 }
@@ -136,14 +143,13 @@
   }
 
   @media screen and (max-width: 580px) {
-
     &::before {
       top: -12%;
     }
   }
 
   @media screen and (max-width: 450px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.58;
   }
 }
