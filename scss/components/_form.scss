@@ -61,6 +61,7 @@
       border-bottom: 1px solid $underline;
       @include futura-font(1.1rem, inherit, none);
       background-color: transparent;
+      outline: 0;
 
       &::placeholder {
         color: inherit;
@@ -130,4 +131,14 @@
       }
     }
   }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance:textfield;
 }

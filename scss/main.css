@@ -391,6 +391,16 @@ footer {
   }
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .def-list {
   font-family: "Proxima Nova", sans-serif;
   text-transform: none;
@@ -1059,6 +1069,7 @@ footer {
   font-size: 1.1rem;
   color: inherit;
   background-color: transparent;
+  outline: 0;
 }
 
 .on-control__inner .form .form__main-group input::-webkit-input-placeholder {
@@ -1753,6 +1764,7 @@ footer {
   font-size: 1.1rem;
   color: inherit;
   background-color: transparent;
+  outline: 0;
 }
 
 .form .form__main-group input::-webkit-input-placeholder {
@@ -3120,6 +3132,7 @@ footer {
   font-size: 1.1rem;
   color: inherit;
   background-color: transparent;
+  outline: 0;
 }
 
 .form_footer .form__main-group input::-webkit-input-placeholder {
