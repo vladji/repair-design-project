@@ -42,6 +42,10 @@
   text-align: left;
   color: $dark_color;
 
+  @media screen and (max-width: 1170px) {
+    width: 100%;
+  }
+
   .types-repair__bullets-round-wrapper {
     position: absolute;
     top: -10%;

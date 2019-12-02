@@ -24,8 +24,8 @@
   }
 
   &:hover {
-    background-color: transparent;
-    box-shadow: 0 0 15px 5px $gold_color;
+    background-color: $back-dark;
+    box-shadow: 0 0 3px 3px $gold_color;
   }
 }
 
@@ -41,7 +41,7 @@
   @include yeseva-font(0.9rem, $white_color, uppercase);
   background-color: $back-dark;
   cursor: default;
-  transition: bottom 0.5s ease-in;
+  transition: bottom 0.2s ease-in;
 
   .scroll-btn__inner-icon {
     width: 29px;
@@ -66,17 +66,21 @@
   top: 50%;
   width: 55px;
   height: 55px;
+  transform: translateY(-50%);
   border-radius: 50%;
   background-color: $gold_color;
-  background-image: url("../assets/img/arrow-next_white.png");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  transition: width 0.2s ease-in, height 0.2s ease-in;
+  transition: transform 0.3s ease-in, background-color 0.2s ease-in;
 
   &:hover {
-    width: 65px;
-    height: 65px;
+    transform: translateY(-50%) scale(1.5);
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   @media screen and (max-width: 450px) {
@@ -86,13 +90,13 @@
 }
 
 .slider-btn_next {
-  left: 60%;
-  transform: translateY(-50%);
+  right: 35%;
+  background-image: url("../assets/img/arrow-next_white.png");
 }
 
 .slider-btn_prev {
   left: 3%;
-  transform: rotate(180deg) translateY(50%);
+  background-image: url("../assets/img/arrow-prev_white.png");
 }
 
 // * Video btn

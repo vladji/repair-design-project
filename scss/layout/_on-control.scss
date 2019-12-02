@@ -29,17 +29,6 @@
 
     button {
       @include main-btn(200px, 50px, $font-futura, 0.9rem);
-
-      &:hover {
-        color: $dark_color;
-      }
-
-      @media screen and (max-width: 1170px) {
-        &:hover {
-          color: $white_color;
-          background-color: $back-dark;
-        }
-      }
     }
   }
 }

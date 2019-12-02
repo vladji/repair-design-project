@@ -64,7 +64,7 @@
       position: static;
 
       .slider-btn_next {
-        left: 90%;
+        right: 3%;
       }
     }
 
@@ -124,15 +124,27 @@
       display: flex;
       overflow: hidden;
 
-      li {
+      li.active {
         margin-right: 25px;
 
-        img {
+        @media screen and (max-width: 1170px) {
           display: block;
+          width: 100%;
+          margin: 0;
+        }
+      }
 
-          @media screen and (max-width: 1170px) {
-            width: 88vw;
-          }
+      li {
+        @media screen and (max-width: 1170px) {
+          display: none;
+        }
+      }
+
+      img {
+        display: block;
+
+        @media screen and (max-width: 1170px) {
+          width: 100%;
         }
       }
     }
