@@ -1,5 +1,5 @@
 ## repair-design-project  
-Homework: repair-design-project. Difficulty Level 3.  
+Difficulty Level 3.  
 * [Task overview](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-3/repair-design-project/repair-design-project-en.md)
 * [demo link](https://vladji.github.io/repair-design-project/)
 
